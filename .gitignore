@@ -1,0 +1,12 @@
+# Visual Studio Code
+
+.vscode
+
+# Intellij IDEA
+
+.idea
+.iml
+
+# Mac
+
+.DS_Store
