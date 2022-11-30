@@ -1,12 +1,11 @@
-# Visual Studio Code
+root = true
 
-.vscode
+[*]
+end_of_line = lf
+charset = utf-8
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
 
-# Intellij IDEA
-
-.idea
-.iml
-
-# Mac
-
-.DS_Store
+[*{html, css, js}]
+indent_size = 2
