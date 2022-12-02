@@ -5,7 +5,7 @@
 # Intellij IDEA
 
 .idea
-.iml
+*.iml
 
 # Mac
 
