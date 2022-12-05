@@ -1,5 +1,21 @@
 import express from "express";
-import userModel from "../models/userModel.js";
 
 const commentRouter = express.Router();
+
+commentRouter.post("/", (req, res) => {
+  // CREATE
+});
+
+commentRouter.get("/", (req, res) => {
+  // READ
+});
+
+commentRouter.patch("/", (req, res) => {
+  // UPDATE
+});
+
+commentRouter.delete("/", (req, res) => {
+  // DELETE
+});
+
 export default commentRouter;
