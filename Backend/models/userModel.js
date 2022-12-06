@@ -7,10 +7,11 @@ function validarCorreo(correo) {
   return expressionRegular.test(correo);
 }
 
-const userModel = mongoose.Schema({
+const userModel = mongoose.Schema ({
   "nombre": { type: String, required: true },
+  "nombre de usuario": { type: String, required: true, minLength: 5, maxLength: 12 },
   "contrasenia": { type: String, required: true },
-  "correo": { type: String, required: true, validate: { validator: validarCorreo, message: "Volud@, me podes hacer el favor de ingresar un correo correcto" }  },
+  "correo": { type: String, required: true, validate: { validator: validarCorreo, message: "Volud@, me podes hacer el favor de ingresar un correo correcto" } },
   "anio de nacimiento": { type: Number, required: true, min: 1940, max: 2022 },
   "publicaciones": Array,
   "comentarios": Array
