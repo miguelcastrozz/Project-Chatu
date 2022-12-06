@@ -11,9 +11,18 @@ export async function createUser(req, res) {
   res.status(201);
 }
 
-export function readUser(req,res) {
-  const id = req.params.id;
-
+export async function readUser(req, res) {
+  // Con el nombre de usuario encontrar el usuario
+  const nombreDeUsuario = req.params.id;
+  const id = req.params.id.;
+  let documento
+  try {
+    documento = await userModel.findOne({ "_id": id })
+  } catch (error) {
+    res.status(400).json(error.message)
+    return;
+  }
+  res.status(200).json(documento)
 }
 
 export function updateUser(req, res) {
