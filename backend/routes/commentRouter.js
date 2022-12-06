@@ -1,21 +1,26 @@
 import express from "express";
+import { createComment, deleteComment, readComment, readOneComment, updateComment } from "../controllers/commentController.js";
 
 const commentRouter = express.Router();
 
 commentRouter.post("/", (req, res) => {
-  // CREATE
-});
+  createComment(req, res)
+})
 
 commentRouter.get("/", (req, res) => {
-  // READ
+  readComment(req, res)
 });
 
-commentRouter.patch("/", (req, res) => {
-  // UPDATE
+commentRouter.get("/:id", (req, res) => {
+  readOneComment(req, res)
 });
 
-commentRouter.delete("/", (req, res) => {
-  // DELETE
+commentRouter.patch("/:id", (req, res) => {
+  updateComment(req, res)
+});
+
+commentRouter.delete("/:id", (req, res) => {
+  deleteComment(req, res)
 });
 
 export default commentRouter;

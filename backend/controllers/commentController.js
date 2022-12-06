@@ -1,17 +1,62 @@
 import commentModel from "../models/commentModel.js";
 
-function createComment(req, res) {
-  // CODE BLOCK
+export async function createComment(req, res) {
+  const comentario = req.body.comentario;
+  let documento;
+  try {
+    documento = await commentModel.create(comentario);
+  } catch (error) {
+    res.status(400).json(error);
+    return;
+  }
+  res.status(201).json(documento);
 }
 
-function readComment(req,res) {
-  // CODE BLOCK
+export async function readOneComment(req, res){
+  const id = req.params.id;
+  let documento;
+  try {
+    documento = await commentModel.findOne({"_id":id});
+  } catch (error) {
+    res.status(400).json(error.message);
+    return;
+  }
+  res.status(201).json(documento);
 }
 
-function updateComment(req, res) {
-  // CODE BLOCK
+export async function readComment(req, res){
+  let documento;
+  try {
+    documento = await commentModel.find();
+  } catch (error) {
+    res.status(400).json(error.message);
+    return;
+  }
+  res.status(201).json(documento);
 }
 
-function deleteComment(req, res) {
-  // CODE BLOCK
+export async function updateComment(req, res){
+  const id = req.params.id;
+  const updates = req.body.updates;
+  const {field, value} = updates;
+  let documento;
+  try {
+    documento = await commentModel.updateOne({"_id":id},updates);
+  } catch (error) {
+    res.status(400).json(error.message);
+    return;
+  }
+  res.status(201).json(documento);
+}
+
+export async function deleteComment(req, res){
+  const id = req.params.id;
+  let documento;
+  try {
+    documento = await commentModel.deleteOne({"_id":id});
+  } catch (error) {
+    res.status(400).json(error.message);
+    return;
+  }
+  res.status(201).json(documento);
 }
