@@ -1,21 +1,22 @@
 import express from "express";
+import { createPublic, deletePublic, readPublic, updatePublic } from "../controllers/publicController.js";
 
 const publicRouter = express.Router();
 
 publicRouter.post("/", (req, res) => {
-  // CREATE
+  createPublic(req, res)
 });
 
-publicRouter.get("/", (req, res) => {
-  // READ
+publicRouter.get("/:_id", (req, res) => {
+  readPublic(req, res)
 });
 
-publicRouter.patch("/", (req, res) => {
-  // UPDATE
+publicRouter.patch("/:_id", (req, res) => {
+  updatePublic(req, res)
 });
 
-publicRouter.delete("/", (req, res) => {
-  // Delete
+publicRouter.delete("/:_id", (req, res) => {
+  deletePublic(req, res)
 });
 
 export default publicRouter;
