@@ -7,7 +7,7 @@ userRouter.post("/", (req, res) => {
   createUser(req, res);
 }); // CREATE
 
-userRouter.get("/id:", (req, res) => {
+userRouter.get("/:id", (req, res) => {
   readUser(req, res);
 }); // READ
 
