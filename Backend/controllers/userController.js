@@ -12,14 +12,36 @@ export async function createUser(req, res) {
 }
 
 export function readUser(req,res) {
-  const id = req.params.id;
+
 
 }
-
-export function updateUser(req, res) {
+// ERIK'S TASKS
+export async function updateUser(req, res) {
   // CODE BLOCK
+  const userName = req.params.nombre;
+  const changes = req.body.actualizar;
+
+  let documento = null;
+
+  try {
+    documento = await userModel.updateOne({"nombre":userName},changes,{runValidators:true});
+  } catch (terrible) {
+    res.status(400).json(terrible.message);
+  }
+
+  res.status(200).json(documento);
+
+
 }
-
-export function deleteUser(req, user) {
+//ERIK'S TASKS
+export async function deleteUser(req, res) {
   // CODE BLOCK
+  const userName = req.params.nombre;
+  var user = null;
+  try{
+      user = await userModel.deleteOne({"nombre": userName});
+  }catch(terrible){
+       res.status(400).json(terrible);
+  }
+   res.status(204);
 }

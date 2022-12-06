@@ -11,11 +11,11 @@ userRouter.get("/id:", (req, res) => {
   readUser(req, res);
 }); // READ
 
-userRouter.patch("/", (req, res) => {
+userRouter.patch("/:nombre", (req, res) => {
   updateUser(req, res);
 }); // UPDATE
 
-userRouter.delete("/", (req, res) => {
+userRouter.delete("/:nombre", (req, res) => {
   deleteUser(req, res);
 }); // DELETE
 
