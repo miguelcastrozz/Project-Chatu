@@ -9,6 +9,6 @@
   },
   "scripts": {
     "dev_back": "nodemon backend/app.js",
-    "dev_front": "nodemon frontend/index.html"
+    "dev_front": "cd frontend && npm run start"
   }
 }
