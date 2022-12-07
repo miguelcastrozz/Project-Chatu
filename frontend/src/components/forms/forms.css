@@ -1,0 +1,16 @@
+.button {
+  background-color: transparent;
+  border-radius: 24px;
+  color: black;
+  margin: 50px 150px;
+  text-align: center;
+  width: 542px;
+}
+
+.button:hover {
+  background-color: crimson;
+}
+
+.button:active {
+  background-color: aqua;
+}
