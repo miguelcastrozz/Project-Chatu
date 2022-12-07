@@ -1,0 +1,13 @@
+:root {
+  --color-principal: rgba(112, 0, 255, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
