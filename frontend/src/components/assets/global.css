@@ -1,10 +1,13 @@
 :root {
-  /*color palletes*/
+  /* Color palletes */
+
   --main-color: rgba(29, 24, 58, 1);
   --complementary-color-1: rgba(112, 0, 255, 1);
   --complementary-color-2: rgba(0, 163, 255, 1);
   --complementary-color-3: rgba(255, 0, 0, 1);
-  /*font sizes*/
+
+  /* Font sizes */
+
   --size-paragraph: 24px;
   --size-middle: 64px;
   --size-max: 120px;
