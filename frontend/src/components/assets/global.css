@@ -1,9 +1,9 @@
 :root {
   /*color palletes*/
-  --color-principal: rgba(29, 24, 58, 1);
-  --color-complementario: rgba(112, 0, 255, 1);
-  --color-complementario-1: rgba(0, 163, 255, 1);
-  --color-complementario-2: rgba(255, 0, 0, 1);
+  --main-color: rgba(29, 24, 58, 1);
+  --complementary-color-1: rgba(112, 0, 255, 1);
+  --complementary-color-2: rgba(0, 163, 255, 1);
+  --complementary-color-3: rgba(255, 0, 0, 1);
   /*font sizes*/
   --size-paragraph: 24px;
   --size-middle: 64px;
