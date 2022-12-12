@@ -5,23 +5,23 @@ export async function createUser(req, res) {
   let documento;
   try {
     documento = await userModel.create(usuario);
+    res.status(201).json(documento);
   } catch (terrible) {
     res.status(400).json(terrible.message);
   }
-  res.status(201);
 }
 
 export async function readUser(req, res) {
   const nombreDeUsuario = req.params.id;
   const id = req.params.id;
-  let documento
+  let documento;
   try {
-    documento = await userModel.findOne({ "_id": id })
+    documento = await userModel.findOne({ _id: id });
   } catch (error) {
-    res.status(400).json(error.message)
+    res.status(400).json(error.message);
     return;
   }
-  res.status(200).json(documento)
+  res.status(200).json(documento);
 }
 
 export async function updateUser(req, res) {
@@ -29,7 +29,9 @@ export async function updateUser(req, res) {
   const changes = req.body.actualizar;
   let documento = null;
   try {
-    documento = await userModel.updateOne({ "nombre": userName }, changes, { runValidators: true });
+    documento = await userModel.updateOne({ nombre: userName }, changes, {
+      runValidators: true,
+    });
   } catch (terrible) {
     res.status(400).json(terrible.message);
   }
@@ -40,7 +42,7 @@ export async function deleteUser(req, res) {
   const userName = req.params.nombre;
   var user = null;
   try {
-    user = await userModel.deleteOne({ "nombre": userName });
+    user = await userModel.deleteOne({ nombre: userName });
   } catch (terrible) {
     res.status(400).json(terrible);
   }
