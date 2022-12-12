@@ -9,9 +9,9 @@
 
   /* Font sizes */
 
-  --size-paragraph: 24px;
-  --size-middle: 64px;
-  --size-max: 120px;
+  --size-paragraph: 2.4rem;
+  --size-middle: 6.4rem;
+  --size-max: 7rem;
 
 }
 
@@ -22,5 +22,10 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px, 1px = 0.1rem */
+  background-color: var(--main-color);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }

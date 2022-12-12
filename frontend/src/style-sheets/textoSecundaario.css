@@ -1,0 +1,13 @@
+.textos {
+  text-align: center;
+}
+
+.children {
+  color: white;
+  font-size: var(--size-paragraph);
+}
+
+a {
+  color: #00A3FF;
+  text-decoration-line: underline;
+}

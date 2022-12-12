@@ -1,13 +1,13 @@
 import {createContext} from "react";
 
-export const InicioSessionContext = createContext();
+export const ButtonContext = createContext();
 
 export function InicioSessionContextProvider(props) {
   // IMPLEMENTACIÓN
   return (
-    <InicioSessionContext.Provider value={{
+    <ButtonContext.Provider value={{
       // ITEMS
     }}>
-    </InicioSessionContext.Provider>
+    </ButtonContext.Provider>
   );
 }
