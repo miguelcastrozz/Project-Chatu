@@ -1,5 +1,5 @@
 import React from "react";
-import "./forms.css"
+import "../style-sheets/forms.css"
 
 export default function IniciarSession(props) {
   const { children } = props;
