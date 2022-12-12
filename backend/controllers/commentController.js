@@ -5,18 +5,18 @@ export async function createComment(req, res) {
   let documento;
   try {
     documento = await commentModel.create(comentario);
+    res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error);
     return;
   }
-  res.status(201).json(documento);
 }
 
-export async function readOneComment(req, res){
+export async function readOneComment(req, res) {
   const id = req.params.id;
   let documento;
   try {
-    documento = await commentModel.findOne({"_id":id});
+    documento = await commentModel.findOne({ _id: id });
   } catch (error) {
     res.status(400).json(error.message);
     return;
@@ -24,7 +24,7 @@ export async function readOneComment(req, res){
   res.status(201).json(documento);
 }
 
-export async function readComment(req, res){
+export async function readComment(req, res) {
   let documento;
   try {
     documento = await commentModel.find();
@@ -35,25 +35,25 @@ export async function readComment(req, res){
   res.status(201).json(documento);
 }
 
-export async function updateComment(req, res){
+export async function updateComment(req, res) {
   const id = req.params.id;
   const updates = req.body.updates;
-  const {field, value} = updates;
+  const { field, value } = updates;
   let documento;
   try {
-    documento = await commentModel.updateOne({"_id":id},updates);
+    documento = await commentModel.updateOne({ _id: id }, updates);
+    res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error.message);
     return;
   }
-  res.status(201).json(documento);
 }
 
-export async function deleteComment(req, res){
+export async function deleteComment(req, res) {
   const id = req.params.id;
   let documento;
   try {
-    documento = await commentModel.deleteOne({"_id":id});
+    documento = await commentModel.deleteOne({ _id: id });
   } catch (error) {
     res.status(400).json(error.message);
     return;
