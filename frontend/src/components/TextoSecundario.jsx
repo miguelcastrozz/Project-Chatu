@@ -5,5 +5,5 @@ export function TextoSecundario({ children, link }) {
       <p className="children">{children}
         <a href="#">{link}</a></p>
     </div>
-  )
+  );
 }
