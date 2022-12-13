@@ -8,7 +8,7 @@ function validarCorreo(correo) {
 
 const userModel = mongoose.Schema({
   nombre: { type: String, required: true },
-  "nombre de usuario": {
+  nombre_usuario: {
     type: String,
     required: true,
     minLength: 5,
@@ -24,7 +24,7 @@ const userModel = mongoose.Schema({
       message: "Ingrese un correo correcto",
     },
   },
-  "anio de nacimiento": { type: Number, required: true, min: 1940, max: 2022 },
+  anio_nacimiento: { type: Number, required: true, min: 1940, max: 2022 },
   publicaciones: Array,
   comentarios: Array,
 });
