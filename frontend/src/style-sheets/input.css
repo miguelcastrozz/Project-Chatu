@@ -1,0 +1,9 @@
+input {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--size-paragraph);
+  margin: 2px 3px;
+  padding: 25px 5px;
+  width: 50rem;
+}
