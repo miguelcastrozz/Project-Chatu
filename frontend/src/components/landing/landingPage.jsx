@@ -13,7 +13,7 @@ export default function Landing() {
         ¡Bienvenido a Chatu!.
       </Titulo>
 
-      <Cajas x={35} y={2} width={15} height={3} color={"red"} />
+      <Cajas x={36} y={2} width={15} height={3} color={"red"} />
 
       <Cajas
         x={37}
@@ -40,7 +40,7 @@ export default function Landing() {
       <Subtitulo x={21} y={18} saiz={1}>
         ¿Eres nuevo?, puedes crear una cuenta <br />
         <Anchor x={6} y={0}>
-          crear cuenta
+          Clickea aquí.
         </Anchor>
       </Subtitulo>
     </div>

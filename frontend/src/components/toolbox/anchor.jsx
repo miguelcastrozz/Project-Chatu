@@ -1,4 +1,4 @@
-import "./componentcss/anchor.css";
+import "./componentcss/componentes.css";
 
 export default function Anchor(props) {
   const { children, x, y } = props;

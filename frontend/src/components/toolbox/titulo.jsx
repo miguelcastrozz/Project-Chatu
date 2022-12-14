@@ -1,5 +1,4 @@
-//Este es el componente para poner titutlos
-import "./componentcss/titulo.css";
+import "./componentcss/componentes.css";
 
 export default function Titulo(props) {
   const { children, x, y, saiz } = props;

@@ -1,4 +1,4 @@
-import "./componentcss/boton.css";
+import "./componentcss/componentes.css";
 
 export default function Boton(props) {
   const { children, x, y, width } = props;

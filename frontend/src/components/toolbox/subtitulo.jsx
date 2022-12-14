@@ -1,5 +1,5 @@
 import React from "react";
-import "./componentcss/subtitulo.css";
+import "./componentcss/componentes.css";
 
 export default function Subtitulo(props) {
   const { children, x, y, saiz } = props;
