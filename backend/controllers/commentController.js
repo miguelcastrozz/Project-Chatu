@@ -1,3 +1,5 @@
+// TODO: Verificar endpoints de controladores, encriptación y JWT
+
 import commentModel from "../models/commentModel.js";
 
 export async function createComment(req, res) {
