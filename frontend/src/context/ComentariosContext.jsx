@@ -1,13 +1,13 @@
 import {createContext} from "react";
 
-export const ButtonContext = createContext();
+export const ComentariosContext = createContext();
 
 export function InicioSessionContextProvider(props) {
   // IMPLEMENTACIÓN
   return (
-    <ButtonContext.Provider value={{
+    <ComentariosContext.Provider value={{
       // ITEMS
     }}>
-    </ButtonContext.Provider>
+    </ComentariosContext.Provider>
   );
 }
