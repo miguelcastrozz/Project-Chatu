@@ -1,0 +1,31 @@
+:root {
+
+  /* Color palletes */
+
+  --main-color: rgba(29, 24, 58, 1);
+  --complementary-color-1: rgba(112, 0, 255, 1);
+  --complementary-color-2: rgba(0, 163, 255, 1);
+  --complementary-color-3: rgba(255, 0, 0, 1);
+
+  /* Font sizes */
+
+  --size-paragraph: 2.4rem;
+  --size-middle: 6.4rem;
+  --size-max: 7rem;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px, 1px = 0.1rem */
+  background-color: var(--main-color);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
