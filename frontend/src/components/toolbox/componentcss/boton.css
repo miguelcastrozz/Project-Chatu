@@ -1,0 +1,25 @@
+.boton {
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2.5px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 15px;
+  transition: 2.5s;
+  animation-name: intro;
+  animation-duration: 1s;
+}
+
+.boton:hover {
+  transition: 0.5s;
+  background-color: rgba(0, 163, 255, 0.5);
+}
+
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

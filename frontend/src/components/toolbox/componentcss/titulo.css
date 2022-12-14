@@ -1,0 +1,21 @@
+h1 {
+  font-family: sans-serif;
+  font-weight: bolder;
+
+  color: white;
+  width: 30rem;
+
+  position: absolute;
+
+  animation-name: intro;
+  animation-duration: 2s;
+}
+
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

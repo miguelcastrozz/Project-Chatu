@@ -1,0 +1,18 @@
+.subtitulo {
+  font-family: sans-serif;
+  font-weight: normal;
+
+  color: white;
+
+  animation-name: intro;
+  animation-duration: 2s;
+}
+
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
