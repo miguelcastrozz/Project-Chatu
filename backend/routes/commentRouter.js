@@ -1,3 +1,5 @@
+// TODO: Verificar Routers
+
 import express from "express";
 import { createComment, deleteComment, readComment, readOneComment, updateComment } from "../controllers/commentController.js";
 
