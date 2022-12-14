@@ -1,5 +1,5 @@
 import express from "express";
-import { createUser, readUser, updateUser, deleteUser, LoginUser, verifyUser } from "../controllers/userController.js";
+import { createUser, readUser, updateUser, deleteUser, LoginUser } from "../controllers/userController.js";
 
 const userRouter = express.Router();
 
@@ -14,10 +14,6 @@ userRouter.get("/:id", (req, res) => {
 userRouter.get("/", (req, res) => {
   LoginUser(req, res);
 }); // LOGIN
-
-userRouter.get("/verify", (req, res) => {
-  verifyUser(req, res);
-}); // VERIFY TOKEN
 
 userRouter.patch("/:nombre", (req, res) => {
   updateUser(req, res);
