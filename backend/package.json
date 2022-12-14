@@ -11,5 +11,8 @@
   },
   "scripts": {
     "dev": "nodemon ./app.js"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
   }
 }
