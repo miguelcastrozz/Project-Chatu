@@ -1,0 +1,9 @@
+.principal {
+  margin: auto;
+  border: 2px solid white;
+  height: 35rem;
+  width: 60rem;
+  position: absolute;
+  left: 50%;
+  background-color: var(--main-color);
+}

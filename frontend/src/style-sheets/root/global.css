@@ -1,5 +1,4 @@
 :root {
-
   /* Color palletes */
 
   --main-color: rgba(29, 24, 58, 1);
@@ -13,6 +12,7 @@
   --size-middle: 6.4rem;
   --size-max: 7rem;
 
+  background-color: white;
 }
 
 * {
@@ -26,5 +26,5 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
