@@ -1,12 +1,21 @@
-import React from "react";
-import "./landingcss/landing.css";
-import Titulo from "../toolbox/titulo";
-import Subtitulo from "../toolbox/subtitulo";
-import Boton from "../toolbox/boton";
-import Cajas from "../toolbox/visuales/caja";
-import Anchor from "../toolbox/anchor";
+/*el enrutamoento con / empieza cuando  ya se haya hecho el primero,
+  ejemplos:
+  CORRECTO:
+   direccion={"login/nombres"}
+  INCORRECTO:
+  direccion={"/login/nombres"}
+  */
 
-export default function Landing() {
+import "../style-sheets/app.css";
+
+import React from "react";
+import Titulo from "./toolbox/titulo";
+import Subtitulo from "./toolbox/subtitulo";
+import Boton from "./toolbox/boton";
+import Cajas from "./toolbox/visuales/caja";
+import Anchor from "./toolbox/anchor";
+
+export default function Principal() {
   return (
     <div className="principal">
       <Titulo x={3} y={1} saiz={5}>
@@ -34,12 +43,13 @@ export default function Landing() {
       <Subtitulo x={4} y={5} saiz={1}>
         Donde las ideas convergen
       </Subtitulo>
-      <Boton x={20} y={16} width={20}>
-        Iniciar sesion
+
+      <Boton x={20} y={16} width={20} direccion={"login"}>
+        Iniciar sesión.
       </Boton>
       <Subtitulo x={21} y={18} saiz={1}>
         ¿Eres nuevo?, puedes crear una cuenta <br />
-        <Anchor x={6} y={0}>
+        <Anchor x={6} y={0} direccion={"register"}>
           Clickea aquí.
         </Anchor>
       </Subtitulo>

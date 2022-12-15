@@ -1,0 +1,29 @@
+import "../style-sheets/app.css";
+
+import Boton from "./toolbox/boton";
+import Texto from "./toolbox/Input";
+import Titulo from "./toolbox/titulo";
+
+export default function Ingreso() {
+  const long = 18;
+  const height = 2;
+
+  return (
+    <div className="Login">
+      <Titulo x={2} y={1} saiz={5}>
+        ¡Bienvenido!, nuevo usuario
+      </Titulo>
+      <Texto x={31} y={12} archtype={"text"} width={long} height={height}>
+        usuario:
+      </Texto>
+
+      <Texto x={31} y={16} archtype={"password"} width={long} height={height}>
+        Contraseña:
+      </Texto>
+
+      <Boton x={31} y={20} width={long}>
+        Iniciar sesión.
+      </Boton>
+    </div>
+  );
+}

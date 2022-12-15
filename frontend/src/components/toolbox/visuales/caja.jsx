@@ -1,3 +1,5 @@
+import "../../../style-sheets/app.css";
+
 export default function Cajas(props) {
   const { x, y, width, height, color } = props;
 
