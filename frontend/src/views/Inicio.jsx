@@ -1,7 +1,9 @@
+import Principal from "../components/Inicio";
+
 export default function Inicio() {
   return (
     <>
-      <h1>INICIO</h1>
+      <Principal />
     </>
   );
 }
