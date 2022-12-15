@@ -1,5 +1,3 @@
-// TODO: Verificar modelos
-
 import mongoose from "mongoose";
 
 const commentModel = mongoose.Schema ({

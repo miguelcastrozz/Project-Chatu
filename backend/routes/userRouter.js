@@ -7,7 +7,7 @@ userRouter.post("/", (req, res) => {
   createUser(req, res);
 }); // CREATE
 
-userRouter.get("/:id", (req, res) => {
+userRouter.get("/:nombre_usuario", (req, res) => {
   readUser(req, res);
 }); // READ
 
@@ -15,11 +15,11 @@ userRouter.get("/", (req, res) => {
   LoginUser(req, res);
 }); // LOGIN
 
-userRouter.patch("/:nombre", (req, res) => {
+userRouter.patch("/:nombre_usuario", (req, res) => {
   updateUser(req, res);
 }); // UPDATE
 
-userRouter.delete("/:nombre", (req, res) => {
+userRouter.delete("/:nombre_usuario", (req, res) => {
   deleteUser(req, res);
 }); // DELETE
 

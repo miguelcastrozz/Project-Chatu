@@ -1,5 +1,3 @@
-// TODO: Verificar endpoints de controladores, encriptación y JWT
-
 import commentModel from "../models/commentModel.js";
 
 export async function createComment(req, res) {
@@ -10,7 +8,6 @@ export async function createComment(req, res) {
     res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error);
-    return;
   }
 }
 
@@ -21,7 +18,6 @@ export async function readOneComment(req, res) {
     documento = await commentModel.findOne({ _id: id });
   } catch (error) {
     res.status(400).json(error.message);
-    return;
   }
   res.status(201).json(documento);
 }
@@ -32,7 +28,6 @@ export async function readComment(req, res) {
     documento = await commentModel.find();
   } catch (error) {
     res.status(400).json(error.message);
-    return;
   }
   res.status(201).json(documento);
 }
@@ -47,7 +42,6 @@ export async function updateComment(req, res) {
     res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error.message);
-    return;
   }
 }
 
@@ -56,9 +50,8 @@ export async function deleteComment(req, res) {
   let documento;
   try {
     documento = await commentModel.deleteOne({ _id: id });
+    res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error.message);
-    return;
   }
-  res.status(201).json(documento);
 }
