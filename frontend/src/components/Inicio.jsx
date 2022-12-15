@@ -1,23 +1,25 @@
-/*el enrutamoento con / empieza cuando  ya se haya hecho el primero,
-  ejemplos:
-  CORRECTO:
-   direccion={"login/nombres"}
-  INCORRECTO:
-  direccion={"/login/nombres"}
-  */
+/*
+El enrutamiento con / empieza cuando ya se haya hecho el primero,
+
+Ejemplos:
+
+✅ Dirección={"login/nombres"}
+❌ Dirección={"/login/nombres"}
+*/
 
 import "../style-sheets/app.css";
 
-import React from "react";
-import Titulo from "./toolbox/titulo";
-import Subtitulo from "./toolbox/subtitulo";
-import Boton from "./toolbox/boton";
-import Cajas from "./toolbox/visuales/caja";
-import Anchor from "./toolbox/anchor";
+import Anchor from "./toolbox/Anchor";
+import Button from "./toolbox/Button";
+import Cajas from "./toolbox/visuales/Rectangle";
+import Subtitulo from "./toolbox/Subtitulo";
+import Titulo from "./toolbox/Titulo";
 
 export default function Principal() {
   return (
+
     <div className="principal">
+
       <Titulo x={3} y={1} saiz={5}>
         ¡Bienvenido a Chatu!.
       </Titulo>
@@ -44,15 +46,18 @@ export default function Principal() {
         Donde las ideas convergen
       </Subtitulo>
 
-      <Boton x={20} y={16} width={20} direccion={"login"}>
+      <Button x={20} y={16} width={20} direccion={"login"}>
         Iniciar sesión.
-      </Boton>
+      </Button>
+
       <Subtitulo x={21} y={18} saiz={1}>
         ¿Eres nuevo?, puedes crear una cuenta <br />
         <Anchor x={6} y={0} direccion={"register"}>
           Clickea aquí.
         </Anchor>
       </Subtitulo>
+
     </div>
+
   );
 }

@@ -1,7 +1,6 @@
 import "../../../style-sheets/app.css";
 
-export default function Cajas(props) {
-  const { x, y, width, height, color } = props;
+export default function Cajas({color, height, width, x, y}) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,

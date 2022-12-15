@@ -1,4 +1,4 @@
-import Ingreso from "../components/ingreso";
+import Ingreso from "../components/Ingreso";
 
 export default function Login() {
   return (

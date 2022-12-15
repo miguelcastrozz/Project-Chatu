@@ -1,6 +1,6 @@
 import "../../style-sheets/componentes.css";
 
-export default function Titulo({ children, x, y, saiz,longitud }) {
+export default function Titulo({children, longitud, saiz, x, y,}) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,

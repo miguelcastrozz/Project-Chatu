@@ -1,8 +1,6 @@
 import { Form } from "react-bootstrap";
-import { propTypes } from "react-bootstrap/esm/Image";
 
-export default function Texto(props) {
-  const { x, y, archtype, width, height, children } = props;
+export default function Texto({archtype, children, height, width, x, y}) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,
@@ -27,4 +25,5 @@ export default function Texto(props) {
       <Form.Control style={fStyles} type={archtype} />;
     </div>
   );
+
 }

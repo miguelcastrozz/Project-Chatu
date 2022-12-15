@@ -1,6 +1,6 @@
 import "../../style-sheets/componentes.css";
 
-export default function Subtitulo({ children, x, y, saiz }) {
+export default function Subtitulo({children, saiz, x, y}) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,
