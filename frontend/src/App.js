@@ -4,7 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import "./style-sheets/root/global.css";
 import "./style-sheets/root/reset.css";
 
-import Inicio from "./views/Incio";
+import Inicio from "./views/Inicio";
 
 export default function App() {
   return (

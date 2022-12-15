@@ -1,8 +1,7 @@
-import React from "react";
-import "./componentcss/componentes.css";
+import "../../style-sheets/componentes.css";
 
-export default function Subtitulo(props) {
-  const { children, x, y, saiz } = props;
+export default function Subtitulo({ children, x, y, saiz }) {
+
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,
     fontSize: `${saiz}rem`,
@@ -13,4 +12,5 @@ export default function Subtitulo(props) {
       {children}
     </p>
   );
+
 }

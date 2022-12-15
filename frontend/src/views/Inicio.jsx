@@ -1,6 +1,5 @@
 import React from "react";
-import Login from "./Login";
-import Landing from "../components/landing/landingPage";
+import Landing from "../components/landing/LandingPage";
 
 export default function Inicio() {
   return (
