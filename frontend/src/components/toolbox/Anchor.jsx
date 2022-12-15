@@ -1,7 +1,7 @@
-import "./componentcss/componentes.css";
+import "../../style-sheets/componentes.css";
 
-export default function Anchor(props) {
-  const { children, x, y } = props;
+export default function Anchor({ children, x, y }) {
+
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,
   };
@@ -11,4 +11,5 @@ export default function Anchor(props) {
       {children}
     </p>
   );
+
 }

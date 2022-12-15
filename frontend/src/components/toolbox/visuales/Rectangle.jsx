@@ -1,5 +1,4 @@
-export default function Cajas(props) {
-  const { x, y, width, height, color } = props;
+export default function Rectangle({ x, y, width, height, color }) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,
@@ -9,4 +8,5 @@ export default function Cajas(props) {
   };
 
   return <div className="cajas" style={styles}></div>;
+
 }
