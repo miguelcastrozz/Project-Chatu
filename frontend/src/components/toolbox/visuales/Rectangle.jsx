@@ -9,6 +9,8 @@ export default function Cajas({color, height, width, x, y}) {
     backgroundColor: `${color}`,
   };
 
-  return <div className="cajas" style={styles}></div>;
+  return (
+    <div className="cajas" style={styles}></div>
+  );
 
 }

@@ -8,6 +8,10 @@ export default function Titulo({children, longitud, saiz, x, y,}) {
     width: `${longitud}rem`,
   };
 
-  return <h1 style={styles}>{children}</h1>;
+  return (
+    <h1 style={styles}>
+      {children}
+    </h1>
+  );
 
 }

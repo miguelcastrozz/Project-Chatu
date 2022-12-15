@@ -4,15 +4,12 @@ import jwt from "jsonwebtoken";
 
 export async function createUser(req, res) {
   const usuario = req.body.usuario;
-  const { nombre, nombre_usuario, contrasenia, correo, anio_nacimiento } =
-    req.body.usuario;
+  const { nombre, nombre_usuario, contrasenia, correo, anio_nacimiento } = req.body.usuario;
   const salt = await bcrypt.genSalt(10);
   usuario.contrasenia = await bcrypt.hash(contrasenia, salt);
-
   let documento;
   try {
     documento = await userModel.create(usuario);
-
     res.status(201).json(documento);
   } catch (terrible) {
     res.status(400).json(terrible.message);
@@ -34,10 +31,8 @@ export async function readUser(req, res) {
 
 export async function LoginUser(req, res) {
   const usuario = req.body.login;
-  const ACCESS_TOKEN =
-    "2f9359f60fa849011aaf711a4332e84a13283b568230317fee84ad9cd1dc71b887c1fcaf10a4704697e26e26f697fa27b57b21e1f3669c89c930f8e65adda1a1";
+  const ACCESS_TOKEN = "2f9359f60fa849011aaf711a4332e84a13283b568230317fee84ad9cd1dc71b887c1fcaf10a4704697e26e26f697fa27b57b21e1f3669c89c930f8e65adda1a1";
   let documento;
-
   documento = await userModel.findOne({
     nombre_usuario: usuario.nombre_usuario,
   });
@@ -46,7 +41,6 @@ export async function LoginUser(req, res) {
       usuario.contrasenia,
       documento.contrasenia
     );
-
     if (acceso) {
       const token = jwt.sign(usuario.nombre_usuario, ACCESS_TOKEN);
       res.status(200).json(token);
@@ -60,8 +54,7 @@ export async function LoginUser(req, res) {
 
 export async function verifyToken(req, res) {
   const { token } = req.headers;
-  const ACCESS_TOKEN =
-    "2f9359f60fa849011aaf711a4332e84a13283b568230317fee84ad9cd1dc71b887c1fcaf10a4704697e26e26f697fa27b57b21e1f3669c89c930f8e65adda1a1";
+  const ACCESS_TOKEN = "2f9359f60fa849011aaf711a4332e84a13283b568230317fee84ad9cd1dc71b887c1fcaf10a4704697e26e26f697fa27b57b21e1f3669c89c930f8e65adda1a1";
   try {
     const usuario = jwt.verify(token, ACCESS_TOKEN);
     res.json(usuario);
@@ -73,11 +66,9 @@ export async function verifyToken(req, res) {
 export async function updateUser(req, res) {
   const userName = req.params.nombre_usuario;
   const changes = req.body.actualizar;
-  const { nombre, nombre_usuario, contrasenia, correo, anio_nacimiento } =
-    req.body.actualizar;
+  const { nombre, nombre_usuario, contrasenia, correo, anio_nacimiento } = req.body.actualizar;
   const salt = await bcrypt.genSalt(10);
   changes.contrasenia = await bcrypt.hash(contrasenia, salt);
-
   let documento = null;
   try {
     documento = await userModel.updateOne(

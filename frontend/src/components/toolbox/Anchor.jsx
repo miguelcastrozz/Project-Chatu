@@ -1,5 +1,5 @@
 import "./../../style-sheets/componentes.css";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export default function Anchor({children, direccion, x, y}) {
 
