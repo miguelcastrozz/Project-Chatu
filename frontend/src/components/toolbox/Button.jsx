@@ -1,6 +1,6 @@
 import "../../style-sheets/componentes.css";
 
-export default function Button({ children, x, y, width }) {
+export default function Button({children, width, x, y}) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,

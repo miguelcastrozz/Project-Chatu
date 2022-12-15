@@ -1,12 +1,11 @@
-import "./componentcss/componentes.css";
+import "./../../style-sheets/componentes.css";
 import { useNavigate } from "react-router-dom";
 
-export default function Anchor(props) {
-  const { children, x, y, direccion } = props;
+export default function Anchor({children, direccion, x, y}) {
 
   const navigate = useNavigate();
 
-  function redireccion() {
+  function redirect() {
     navigate(`/${direccion}`);
     console.log("me has dado click.");
   }
@@ -16,8 +15,9 @@ export default function Anchor(props) {
   };
 
   return (
-    <p className="Link" style={styles} onClick={redireccion}>
+    <p className="Link" style={styles} onClick={redirect}>
       {children}
     </p>
   );
+
 }

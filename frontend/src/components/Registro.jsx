@@ -1,24 +1,31 @@
-/*Pagina inestable
-NO TOCAR!!!!!!!!! */
+/*
+Pagina inestable
+NO TOCAR
+*/
 
 import "../style-sheets/app.css";
 
-import Boton from "./toolbox/boton";
+import Button from "./toolbox/Button";
 import Texto from "./toolbox/Input";
-import Titulo from "./toolbox/titulo";
+import Titulo from "./toolbox/Titulo";
 
 export default function Registrar() {
+
   const long = 18;
   const height = 2;
 
   return (
+
     <div className="Login">
+
       <Titulo x={2} y={1} saiz={5}>
         ¡Hola!
       </Titulo>
+
       <Texto x={31} y={12} archtype={"text"} width={long} height={height}>
         usuario
       </Texto>
+
       <Texto x={31} y={12} archtype={"text"} width={long} height={height}>
         nombre de usuario.
       </Texto>
@@ -35,9 +42,12 @@ export default function Registrar() {
         año de nacimiento
       </Texto>
 
-      <Boton x={31} y={20} width={long}>
+      <Button x={31} y={20} width={long}>
         Crear Cuenta.
-      </Boton>
+      </Button>
+
     </div>
+
   );
+
 }
