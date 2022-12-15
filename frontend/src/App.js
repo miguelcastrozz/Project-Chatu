@@ -1,8 +1,8 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 
-import "./style-sheets/root/global.css";
-import "./style-sheets/root/reset.css";
+import "./stylesheets/root/global.css";
+import "./stylesheets/root/reset.css";
 
 import Inicio from "./views/Inicio";
 import Login from "./views/Login";
