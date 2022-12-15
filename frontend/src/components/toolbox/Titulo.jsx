@@ -1,7 +1,6 @@
-import "./componentcss/componentes.css";
+import "../../style-sheets/componentes.css";
 
-export default function Titulo(props) {
-  const { children, x, y, saiz, longitud } = props;
+export default function Titulo({ children, x, y, saiz,longitud }) {
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,
@@ -10,4 +9,5 @@ export default function Titulo(props) {
   };
 
   return <h1 style={styles}>{children}</h1>;
+
 }

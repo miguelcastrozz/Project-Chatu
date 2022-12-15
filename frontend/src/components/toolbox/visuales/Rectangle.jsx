@@ -11,4 +11,5 @@ export default function Cajas(props) {
   };
 
   return <div className="cajas" style={styles}></div>;
+
 }
