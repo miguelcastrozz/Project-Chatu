@@ -28,6 +28,7 @@ nav {
   right: 0.1%;
   background-color: var(--main-color);
 }
+
 .cajas {
   animation-name: "appear";
   animation-duration: 3s;
@@ -36,7 +37,7 @@ nav {
 @keyframes appear {
   from {
     opacity: 0;
-    width: 0%;
+    width: 0;
   }
   to {
     opacity: 1;

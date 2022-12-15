@@ -4,8 +4,8 @@ import mongoose from "mongoose";
 
 import commentRouter from "./routes/commentRouter.js";
 import publicRouter from "./routes/publicRouter.js";
+import tokenRouter from "./routes/tokenRouter.js";
 import userRouter from "./routes/userRouter.js";
-import tokenRouter from "./routes/tokenRoutes.js";
 
 const app = express();
 const port = process.env.port || 8080;
