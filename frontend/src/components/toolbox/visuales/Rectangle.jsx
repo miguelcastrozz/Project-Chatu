@@ -1,4 +1,7 @@
-export default function Rectangle({ x, y, width, height, color }) {
+import "../../../style-sheets/app.css";
+
+export default function Cajas(props) {
+  const { x, y, width, height, color } = props;
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,

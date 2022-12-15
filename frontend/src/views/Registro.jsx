@@ -1,7 +1,8 @@
+import Registrar from "../components/registro";
 export default function Registro() {
   return (
     <>
-      <h1>REGISTRO</h1>
+      <Registrar />
     </>
   );
 }

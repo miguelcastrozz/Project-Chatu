@@ -1,8 +1,45 @@
+nav {
+  color: white;
+}
+
 .formulario {
   border: 25px;
   padding: 25px 75px;
 }
 
-nav {
-  color: white;
+.principal {
+  margin: auto;
+  border: 2px solid white;
+  height: 35rem;
+  width: 60rem;
+  position: absolute;
+  left: 0.1%;
+  right: 0.1%;
+  background-color: var(--main-color);
+}
+
+.Login {
+  margin: auto;
+  border: 2px solid white;
+  height: 35rem;
+  width: 60rem;
+  position: absolute;
+  left: 0.1%;
+  right: 0.1%;
+  background-color: var(--main-color);
+}
+.cajas {
+  animation-name: "appear";
+  animation-duration: 3s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 24%;
+  }
 }

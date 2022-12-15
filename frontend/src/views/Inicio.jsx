@@ -1,10 +1,9 @@
-import React from "react";
-import Landing from "../components/landing/LandingPage";
+import Principal from "../components/Inicio";
 
 export default function Inicio() {
   return (
     <>
-      <Landing />
+      <Principal />
     </>
   );
 }
