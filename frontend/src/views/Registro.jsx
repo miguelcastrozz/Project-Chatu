@@ -1,18 +1,25 @@
-import Container  from "react-bootstrap/Container";
+import Container from "react-bootstrap/Container";
 
 import Botones from "../components/Botones";
 import Titulo from "../components/titulo";
-import Vinculos from "../components/vinculos";
-
+import IngresarTexto from "../components/IngresarTexto";
 
 export default function Registro() {
   return (
     <>
-     <Container>
+      <Container className="Registro">
         <Titulo>¡Hola!</Titulo>
-        
-        <Botones>iniciar sesion</Botones>
-
+        <p>Nombre</p>
+        <IngresarTexto></IngresarTexto>
+        <p>Nombre de usuario</p>
+        <IngresarTexto></IngresarTexto>
+        <p>Email</p>
+        <IngresarTexto type="email">Email </IngresarTexto>
+        <p>Contraseña</p>
+        <IngresarTexto type="password">Contraseña </IngresarTexto>
+        <p>Año de nacimiento</p>
+        <IngresarTexto type="year">año de nacimiento</IngresarTexto>
+        <Botones width={40}>Crear Cuenta</Botones>
       </Container>
     </>
   );

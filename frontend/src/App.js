@@ -7,6 +7,7 @@ import "./stylesheets/root/reset.css";
 import Inicio from "./views/Inicio";
 import Login from "./views/Login";
 import Registro from "./views/Registro";
+import Publicaciones from "./views/Publicaciones";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Inicio />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Registro />}></Route>
+        <Route path="/publications" element={<Publicaciones />}></Route>
         <Route path="*" element={<h1>404 NOT FOUND</h1>}></Route>
       </Routes>
     </div>

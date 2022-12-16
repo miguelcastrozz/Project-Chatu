@@ -1,0 +1,124 @@
+nav {
+  color: white;
+}
+
+.titulo {
+  font-size: 5rem;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.Inicio {
+  color: white;
+  background-color: var(--main-color);
+  padding: 3rem;
+  width: 100%;
+  font-family: sans-serif;
+
+  animation: appear;
+  animation-duration: 1.5s;
+
+  border-radius: 1rem;
+}
+
+.Inicio-boton {
+  font-weight: normal;
+}
+
+.Inicio-arriba {
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+}
+
+.Inicio-medio {
+  margin: auto;
+  margin-top: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Inicio-abajo {
+  margin: auto;
+  margin-top: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: sans-serif;
+}
+
+.Link {
+  color: white;
+  transition: 1s;
+}
+
+.Link:hover {
+  transition: 1s;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--complementary-color-2);
+}
+
+.Login {
+  background-color: var(--main-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  color: white;
+  font-family: sans-serif;
+
+  animation: appear;
+  animation-duration: 1.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.Login-usuario {
+  margin-top: 2rem;
+}
+
+.Login-contraseña {
+  margin-top: 2rem;
+}
+
+.Login-mitad {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Registro {
+  background-color: var(--main-color);
+  font-family: sans-serif;
+  color: white;
+
+  padding: 2rem;
+  border-radius: 10px;
+
+  animation: appear;
+  animation-duration: 1.5s;
+}
+
+.Registro * {
+  margin-top: 0.1rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
