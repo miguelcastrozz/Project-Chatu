@@ -1,7 +1,11 @@
+import Container from "react-bootstrap/esm/Container";
+
 export default function Publicaciones() {
   return (
     <>
-      <h1>PUBLICACIONES</h1>
+      <Container className="head">
+
+      </Container>
     </>
   );
 }

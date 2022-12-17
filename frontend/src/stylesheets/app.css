@@ -89,8 +89,16 @@ nav {
   margin-top: 2rem;
 }
 
+.Login-usuario > p {
+  margin-bottom: 1rem;
+}
+
 .Login-contraseña {
   margin-top: 2rem;
+}
+
+.Login-contraseña > p {
+  margin-bottom: 1rem;
 }
 
 .Login-mitad {
@@ -112,6 +120,16 @@ nav {
 
 .Registro * {
   margin-top: 0.1rem;
+}
+
+.Registro-form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Registro-form > p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @keyframes appear {

@@ -6,7 +6,9 @@ import Botones from "../components/Botones";
 export default function Login() {
   return (
     <Container className="Login">
-      <Titulo>Hola de nuevo.</Titulo>
+      <Container className="Login-arriba">
+        <Titulo>¡Hola de nuevo!</Titulo>
+      </Container>
       <Container className="Login-mitad">
         <Container className="Login-usuario">
           <p>Usuario:</p>
@@ -17,7 +19,7 @@ export default function Login() {
           <IngresarTexto placeholder={"Contraseña"} type={"password"} />
         </Container>
       </Container>
-      <Botones direccion="publications" width={30}>
+      <Botones direccion="publications" width={64}>
         Iniciar sesión
       </Botones>
     </Container>
