@@ -10,7 +10,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "dev": "nodemon ./app.js"
+    "dev_back": "nodemon ./app.js"
   },
   "devDependencies": {
     "cors": "^2.8.5"
