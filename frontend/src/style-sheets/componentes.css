@@ -29,6 +29,7 @@ h1 {
 .button:hover {
   transition: 0.5s;
   background-color: rgba(0, 163, 255, 0.5);
+  cursor: pointer; cursor: hand;
 }
 
 .subtitulo {
@@ -50,6 +51,8 @@ h1 {
   transition: 1s;
   text-decoration: underline;
   color: rgba(112, 0, 255, 1);
+  cursor: pointer; cursor: hand;
+
 }
 
 .subtitulo {

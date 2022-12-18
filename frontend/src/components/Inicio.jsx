@@ -9,17 +9,17 @@
 import "../style-sheets/app.css";
 
 import React from "react";
-import Titulo from "./toolbox/titulo";
-import Subtitulo from "./toolbox/subtitulo";
-import Boton from "./toolbox/boton";
-import Cajas from "./toolbox/visuales/caja";
-import Anchor from "./toolbox/anchor";
+import Titulo from "./toolbox/Titulo";
+import Subtitulo from "./toolbox/Subtitulo";
+import Boton from "./toolbox/Button";
+import Cajas from "./toolbox/visuales/Rectangle";
+import Anchor from "./toolbox/Anchor";
 
 export default function Principal() {
   return (
     <div className="principal">
       <Titulo x={3} y={1} saiz={5}>
-        ¡Bienvenido a Chatu!.
+        ¡Bienvenido a Chatu!
       </Titulo>
 
       <Cajas x={36} y={2} width={15} height={3} color={"red"} />
@@ -40,17 +40,18 @@ export default function Principal() {
         color={"rgba(0, 163, 255, 1)"}
       />
 
-      <Subtitulo x={4} y={5} saiz={1}>
+      <Subtitulo x={3} y={5} saiz={1}>
         Donde las ideas convergen
       </Subtitulo>
 
       <Boton x={20} y={16} width={20} direccion={"login"}>
-        Iniciar sesión.
+        Iniciar sesión
       </Boton>
       <Subtitulo x={21} y={18} saiz={1}>
         ¿Eres nuevo?, puedes crear una cuenta <br />
         <Anchor x={6} y={0} direccion={"register"}>
-          Clickea aquí.
+          <br />
+          Clickea aquí
         </Anchor>
       </Subtitulo>
     </div>

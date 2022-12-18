@@ -2,7 +2,7 @@ import { Form } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
 
 export default function Texto(props) {
-  const { x, y, archtype, width, height, children } = props;
+  const { x, y, archtype, width, height, children, range, min, max } = props;
 
   const styles = {
     transform: `translate(${x}rem,${y}rem)`,

@@ -1,4 +1,4 @@
-import "./componentcss/componentes.css";
+import "./../../style-sheets/componentes.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Anchor(props) {
