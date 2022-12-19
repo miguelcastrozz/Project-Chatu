@@ -1,20 +1,18 @@
 import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
 
-export default function Botones({ children, direccion, width, color }) {
-  const navigate = useNavigate();
-
+export default function Botones({ children, onClick, type, width , height}) {
   const styles = {
     width: `${width}rem`,
-    color: `${color}`,
+    height: `${height}rem`
   };
 
-  function redirigir() {
-    navigate(`/${direccion}`);
-  }
-
   return (
-    <Button style={styles} variant="outline-primary" onClick={redirigir}>
+    <Button
+      style={styles}
+      type={type}
+      variant="outline-primary"
+      onClick={onClick}
+    >
       {children}
     </Button>
   );

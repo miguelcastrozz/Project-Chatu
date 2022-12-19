@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
-import Botones from "../components/botones";
-import Titulo from "../components/titulo";
+import Botones from "../components/Botones";
 import IngresarTexto from "../components/IngresarTexto";
+import Titulo from "../components/Titulo";
 
 import { useState } from "react";
 
