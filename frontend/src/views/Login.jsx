@@ -9,26 +9,26 @@ export default function Login() {
   async function onSubmit(e) {
     e.preventDefault();
     try {
-      const respuesta = await fetch("http://localhost:8080/api/usuarios", {
+      const respuesta = await fetch("http://localhost:8080/api/login", {
         method: "POST",
         mode: "cors",
         headers: {
           "Content-Type": "application/json", /* Enviamos un json */
         },
         body: JSON.stringify({
-          usuario: {
-            nombre_usuario: usuario,
+          login: {
+            correo: correo,
             contrasenia: password
           }
         })
       });
-      alert("✅" + respuesta.message)
+      alert("✅" + respuesta.status)
     } catch (e) {
       alert("❌" + e.message)
     }
   }
 
-  const [usuario, setUsuario] = useState("");
+  const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
 
   return (
@@ -37,8 +37,8 @@ export default function Login() {
         <Titulo>👋 Hola de nuevo.</Titulo>
         <Container className="Login-mitad">
           <Container className="Login-usuario">
-            <p>Nombre de usuario</p>
-            <IngresarTexto onChange={(e) => setUsuario(e.target.value)}/>
+            <p>Email</p>
+            <IngresarTexto onChange={(e) => setCorreo(e.target.value)} type="email"></IngresarTexto>
           </Container>
           <Container className="Login-contraseña">
             <p>Contraseña</p>
