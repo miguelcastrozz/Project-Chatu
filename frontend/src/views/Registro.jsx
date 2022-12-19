@@ -1,25 +1,57 @@
+import {useState} from "react";
 import Container from "react-bootstrap/Container";
 import Botones from "../components/Botones";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
 
 export default function Registro() {
+  async function onSubmit(e) {
+    e.preventDefault();
+    try {
+      const respuesta = await fetch("http://localhost:8080/api/usuarios", {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json", /* Enviamos un json */
+        },
+        body: JSON.stringify({
+          usuario: {
+            nombre: nombre,
+            nombre_usuario: usuario,
+            correo: correo,
+            anio_nacimiento: anio,
+            contrasenia: password,
+          }
+        })
+      });
+      alert("✅" + respuesta)
+    } catch (e) {
+      alert("❌" + e.message)
+    }
+  }
+
+  const [nombre, setNombre] = useState("");
+  const [usuario, setUsuario] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [anio, setAnio] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
-    <>
+    <form onSubmit={onSubmit}>
       <Container className="Registro">
         <Titulo>¡Hola!</Titulo>
         <p>Nombre</p>
-        <IngresarTexto></IngresarTexto>
+        <IngresarTexto onChange={(e) => setNombre(e.target.value)}></IngresarTexto>
         <p>Nombre de usuario</p>
-        <IngresarTexto></IngresarTexto>
+        <IngresarTexto onChange={(e) => setUsuario(e.target.value)}></IngresarTexto>
         <p>Email</p>
-        <IngresarTexto type="email">Email </IngresarTexto>
+        <IngresarTexto onChange={(e) => setCorreo(e.target.value)} type="email">Email </IngresarTexto>
         <p>Contraseña</p>
-        <IngresarTexto type="password">Contraseña </IngresarTexto>
+        <IngresarTexto onChange={(e) => setPassword(e.target.value)} type="password">Contraseña </IngresarTexto>
         <p>Año de nacimiento</p>
-        <IngresarTexto type="year">año de nacimiento</IngresarTexto>
+        <IngresarTexto onChange={(e) => setAnio(e.target.value)} type="year">año de nacimiento</IngresarTexto>
         <Botones width={40}>Crear Cuenta</Botones>
       </Container>
-    </>
+    </form>
   );
 }
