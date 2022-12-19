@@ -1,4 +1,3 @@
-import { Children } from "react";
 import Form from "react-bootstrap/Form";
 
 export default function IngresarTexto({ ...props }) {
@@ -7,6 +6,7 @@ export default function IngresarTexto({ ...props }) {
       <Form className="d-flex">
         <Form.Control
           type={props.type}
+          onChange={props.onChange}
           placeholder={props.placeholder}
           className="me-2"
           aria-label="Search"

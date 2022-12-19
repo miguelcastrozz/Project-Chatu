@@ -2,7 +2,7 @@
 
 [SPRINT 1](https://github.com/miguelcastrozz/Project-Chatu/tree/Sprint-1) - Plantear, reunion, flujo de trabajo
 
-[SPRINT 2](https://github.com/miguelcastrozz/Project-Chatu/tree/Sprint-2) - Routers, Controlador, Modelo, Consultas HTTP
+[SPRINT 2](https://github.com/miguelcastrozz/Project-Chatu/tree/Sprint-2) - Routers, controlador, modelo, consultas HTTP
 
 SPRINT 3 - Autenticación, autorización, vistas y consultas API (**MUY PRONTO**)
 

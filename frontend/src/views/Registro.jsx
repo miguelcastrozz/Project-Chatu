@@ -1,8 +1,7 @@
 import Container from "react-bootstrap/Container";
-
 import Botones from "../components/Botones";
-import Titulo from "../components/titulo";
 import IngresarTexto from "../components/IngresarTexto";
+import Titulo from "../components/Titulo";
 
 export default function Registro() {
   return (

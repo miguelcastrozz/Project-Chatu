@@ -2,7 +2,7 @@ import {createContext} from "react";
 
 export const PublicacionesContext = createContext();
 
-export function InicioSessionContextProvider(props) {
+export function PublicacionesContextProvider(props) {
   // IMPLEMENTACIÓN
   return (
     <PublicacionesContext.Provider value={{
