@@ -1,13 +1,11 @@
-import React from "react";
 import {Route, Routes} from "react-router-dom";
-
+import React from "react";
 import "./stylesheets/root/global.css";
 import "./stylesheets/root/reset.css";
-
 import Inicio from "./views/Inicio";
 import Login from "./views/Login";
-import Registro from "./views/Registro";
 import Publicaciones from "./views/Publicaciones";
+import Registro from "./views/Registro";
 
 export default function App() {
   return (
