@@ -2,7 +2,7 @@ import "../stylesheets/app.css";
 
 import Container from "react-bootstrap/Container";
 
-import Botones from "../components/Botones";
+import Botones from "../components/botones";
 import Titulo from "../components/titulo";
 import Subtitulo from "../components/subtitulo";
 import Vinculos from "../components/vinculos";
@@ -17,7 +17,7 @@ export default function Inicio() {
         </Container>
         <Container className="Inicio-medio">
           <Botones className="Inicio-boton" direccion="Login" width={25}>
-           iniciar sesion
+            iniciar sesion
           </Botones>
         </Container>
         <Container className="Inicio-abajo">

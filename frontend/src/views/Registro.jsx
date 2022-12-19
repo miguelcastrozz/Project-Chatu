@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import Botones from "../components/Botones";
+import Botones from "../components/botones";
 import Titulo from "../components/titulo";
 import IngresarTexto from "../components/IngresarTexto";
 
@@ -25,9 +25,7 @@ export default function Registro() {
         <Titulo>¡Hola!</Titulo>
         <Container className="Registro-form">
           <p>Nombre</p>
-          <IngresarTexto
-            placeholder={nombre}
-          ></IngresarTexto>
+          <IngresarTexto placeholder={nombre}></IngresarTexto>
           <p>Nombre de usuario</p>
           <IngresarTexto placeholder={nombreDUsuario}></IngresarTexto>
           <p>Email</p>

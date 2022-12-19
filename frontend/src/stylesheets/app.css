@@ -132,6 +132,10 @@ nav {
   margin-bottom: 1rem;
 }
 
+.publicaciones{
+  background-color: var(--main-color);
+}
+
 @keyframes appear {
   0% {
     opacity: 0;

@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Titulo from "../components/titulo";
 import IngresarTexto from "../components/IngresarTexto";
-import Botones from "../components/Botones";
+import Botones from "../components/botones";
 
 export default function Login() {
   return (
