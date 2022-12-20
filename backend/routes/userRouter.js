@@ -11,10 +11,6 @@ userRouter.get("/:nombre_usuario", (req, res) => {
   readUser(req, res);
 }); // READ
 
-userRouter.get("/", (req, res) => {
-  LoginUser(req, res);
-}); // LOGIN
-
 userRouter.patch("/:nombre_usuario", (req, res) => {
   updateUser(req, res);
 }); // UPDATE
