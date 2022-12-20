@@ -128,12 +128,12 @@ nav {
   margin-bottom: 1rem;
 }
 
-.Publicaciones {
+.Publicaciones * {
+  color: white;
 }
 
 .Publicaciones-navbar {
   background-color: var(--main-color);
-  color: white;
   padding: 1rem;
   font-family: sans-serif;
   font-weight: bold;
@@ -150,6 +150,10 @@ nav {
   border-radius: 1rem;
 }
 
+.Publicar-formulario * {
+  margin-top: 2rem;
+}
+
 .Perfil {
   background-color: gray;
   border-radius: 3rem;
@@ -159,12 +163,51 @@ nav {
   height: 4rem;
 }
 
+.Publi {
+  color: white;
+  margin: 3rem 2rem;
+  font-size: 4rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
 .Publicaciones-feed {
   margin-top: 1rem;
   padding: 1rem;
   font-family: sans-serif;
   background-color: var(--main-color);
   border-radius: 1rem;
+}
+
+.Publicar_texto {
+  height: 5rem;
+}
+
+.Publicaciones-feed > div {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.Publicacion_contenido {
+  background-color: grey;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.Publicacion_contenido > h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+.parrafo::first-letter {
+  color: red;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.Publicaciones-Pub {
+  background-color: azure;
 }
 
 @keyframes appear {

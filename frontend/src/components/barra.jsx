@@ -13,13 +13,18 @@ export default function BarradeNav({ ...props }) {
     <Row>
       <Col>
         <Container className="Publicaciones-template">
-          <img src={Logo} style={Logo_style} />
+          <img src={Logo} alt="" style={Logo_style} />
           <p>Chatu</p>
         </Container>
       </Col>
       <Col></Col>
       <Col>
+        <Row>
+          <p>{props.name}</p>
+        </Row>
+        <Row></Row>
         <Container className="Perfil">{props.children}</Container>
+        <Row></Row>
       </Col>
     </Row>
   );
