@@ -11,11 +11,7 @@
 
 .DS_Store
 
-# Environment variables
-
-.env
-
-# node carpetas
+# node folder
 
 node_modules
 
