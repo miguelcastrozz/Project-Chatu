@@ -31,6 +31,7 @@ export default function Registro() {
           }
         })
       });
+      console.log(respuesta.respuesta)
       alert("✅" + respuesta)
     } catch (e) {
       alert("❌" + e.message)

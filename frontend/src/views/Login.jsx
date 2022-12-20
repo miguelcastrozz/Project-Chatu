@@ -3,17 +3,25 @@ import Container from "react-bootstrap/Container";
 import Botones from "../components/Botones";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
+import {useNavigate} from "react-router-dom";
 
 export default function Login() {
+
+  const Redirection = useNavigate();
+  const [correo, setCorreo] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   async function onSubmit(e) {
     e.preventDefault();
     try {
-      const respuesta = await fetch("http://localhost:8080/api/login", {
+      const res = await fetch("http://localhost:8080/api/login", {
         method: "POST",
         mode: "cors",
         headers: {
           "Content-Type": "application/json", /* Enviamos un json */
+          Accept:"aplication/json",
+        "Access-Control-Allow-Origin":"*",
         },
         body: JSON.stringify({
           login: {
@@ -22,14 +30,26 @@ export default function Login() {
           }
         })
       });
-      alert("✅" + respuesta.status)
+      
+      alert(res.data)
+      if(res.status === 200)
+      {
+
+
+        alert("✅" + res)
+        Redirection("/publications")
+      }
+      else
+      {
+        alert("❌" + "Correo y/o Contraseña Incorrectos.")
+
+      }
     } catch (e) {
       alert("❌" + e.message)
     }
-  }
 
-  const [correo, setCorreo] = useState("");
-  const [password, setPassword] = useState("");
+
+}
 
   return (
     <form onSubmit={onSubmit}>

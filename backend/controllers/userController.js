@@ -33,27 +33,21 @@ export async function LoginUser(req, res) {
   const usuario = req.body.login;
   const ACCESS_TOKEN = "2f9359f60fa849011aaf711a4332e84a13283b568230317fee84ad9cd1dc71b887c1fcaf10a4704697e26e26f697fa27b57b21e1f3669c89c930f8e65adda1a1";
   let documento;
-  documento = await userModel.findOne({
-    correo: usuario.correo,
-  });
+  documento = await userModel.findOne({correo: usuario.correo });
 
   if(!documento)
   {
-    res.status(404).json({status:"ERROR", data:"User not found"});
+    res.status(404).json({respuesta:"ERROR", data:"User not found"});
   }
-  try {
-    const acceso = await bcrypt.compare(
-      usuario.contrasenia,
-      documento.contrasenia
-    );
+  else
+  {
+    const acceso = await bcrypt.compare(usuario.contrasenia, documento.contrasenia);
     if (acceso) {
       const token = jwt.sign(usuario.correo, ACCESS_TOKEN);
-      res.status(200).json({status:"OK", data:token});
+      res.status(200).json({respuesta:"OK", data:token});
     } else {
-      res.status(401).json({status:"ERROR", data:"Unauthorized"});
+      res.status(401).json({respuesta:"ERROR", data:"Unauthorized"});
     }
-  } catch (terrible) {
-    res.status(400).json({status:"ERROR", data:terrible.message});
   }
 }
 
