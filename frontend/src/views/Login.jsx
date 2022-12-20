@@ -41,7 +41,7 @@ export default function Login() {
             <IngresarTexto onChange={(e) => setCorreo(e.target.value)} type="email"></IngresarTexto>
           </Container>
           <Container className="Login-contraseña">
-            <p>Contraseña</p>
+            <p>Contraseña:</p>
             <IngresarTexto onChange={(e) => setPassword(e.target.value)} type={"password"}/>
           </Container>
         </Container>

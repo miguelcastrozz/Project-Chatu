@@ -85,8 +85,16 @@ nav {
   margin-top: 2rem;
 }
 
+.Login-usuario > p {
+  margin-bottom: 1rem;
+}
+
 .Login-contraseña {
   margin-top: 2rem;
+}
+
+.Login-contraseña > p {
+  margin-bottom: 1rem;
 }
 
 .Login-mitad {
@@ -108,6 +116,98 @@ nav {
 
 .Registro * {
   margin-top: 0.1rem;
+}
+
+.Registro-form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Registro-form > p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Publicaciones * {
+  color: white;
+}
+
+.Publicaciones-navbar {
+  background-color: var(--main-color);
+  padding: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
+.Publicaciones-saludo {
+  margin-top: 2rem;
+  padding: 2rem;
+  font-size: 3rem;
+  font-family: sans-serif;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 1rem;
+}
+
+.Publicar-formulario * {
+  margin-top: 2rem;
+}
+
+.Perfil {
+  background-color: gray;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.Publi {
+  color: white;
+  margin: 3rem 2rem;
+  font-size: 4rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Publicaciones-feed {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-family: sans-serif;
+  background-color: var(--main-color);
+  border-radius: 1rem;
+}
+
+.Publicar_texto {
+  height: 5rem;
+}
+
+.Publicaciones-feed > div {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.Publicacion_contenido {
+  background-color: grey;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.Publicacion_contenido > h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+.parrafo::first-letter {
+  color: red;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.Publicaciones-Pub {
+  background-color: azure;
 }
 
 @keyframes appear {

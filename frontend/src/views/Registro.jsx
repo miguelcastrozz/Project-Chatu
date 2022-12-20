@@ -4,6 +4,13 @@ import Botones from "../components/Botones";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
 
+import { useState } from "react";
+
+const nombre = "Ingrse un nombre para reconocerlo";
+const nombreDUsuario = "Ingrese un nombre de usuario";
+const correo = "Ingrese su correo";
+const contraseña = "Ingrese una contraseña";
+
 export default function Registro() {
   async function onSubmit(e) {
     e.preventDefault();
