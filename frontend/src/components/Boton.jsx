@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 
-export default function Botones({ children, onClick, type, width, height }) {
+export default function Boton({ children, onClick, height, type, width}) {
+
   const styles = {
     width: `${width}rem`,
     height: `${height}rem`,
@@ -17,4 +18,5 @@ export default function Botones({ children, onClick, type, width, height }) {
       {children}
     </Button>
   );
+
 }

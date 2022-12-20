@@ -1,10 +1,8 @@
 import {useState} from "react";
 import Container from "react-bootstrap/Container";
-import Botones from "../components/Botones";
+import Boton from "./../components/Boton";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
-
-import { useState } from "react";
 
 const nombre = "Ingrse un nombre para reconocerlo";
 const nombreDUsuario = "Ingrese un nombre de usuario";
@@ -58,7 +56,7 @@ export default function Registro() {
         <IngresarTexto onChange={(e) => setPassword(e.target.value)} type="password">Contraseña </IngresarTexto>
         <p>Año de nacimiento</p>
         <IngresarTexto onChange={(e) => setAnio(e.target.value)} type="year">año de nacimiento</IngresarTexto>
-        <Botones width={40}>Crear Cuenta</Botones>
+        <Boton width={40}>Crear Cuenta</Boton>
       </Container>
     </form>
   );

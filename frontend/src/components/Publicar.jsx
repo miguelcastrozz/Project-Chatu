@@ -1,5 +1,5 @@
 import { Container, Form } from "react-bootstrap";
-import Botones from "./Botones";
+import Boton from "./Boton";
 import IngresarTexto from "./IngresarTexto";
 import "../stylesheets/app.css";
 
@@ -8,7 +8,7 @@ export default function Publicar() {
     <Container className="Publicar-formulario">
       <Form>
         <IngresarTexto placeholder="Ingrese su publicacion" height={8} />
-        <Botones width={5}>Publicar</Botones>
+        <Boton width={5}>Publicar</Boton>
       </Form>
     </Container>
   );

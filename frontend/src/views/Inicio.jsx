@@ -1,15 +1,14 @@
 import "../stylesheets/app.css";
 import Container from "react-bootstrap/Container";
-import Botones from "../components/Botones";
+import Boton from "../components/Boton";
 import Titulo from "../components/Titulo";
 import Subtitulo from "../components/Subtitulo";
-import Vinculos from "../components/Vinculos";
+import Vinculo from "../components/Vinculo";
 import { useNavigate } from "react-router-dom";
 
 export default function Inicio() {
 
   const navigate = useNavigate();
-
 
   function redirection(){
       navigate("/login")
@@ -23,11 +22,11 @@ export default function Inicio() {
           <Subtitulo>Donde las opiniones convergen</Subtitulo>
         </Container>
         <Container className="Inicio-medio">
-          <Botones className="Inicio-boton" onClick = {redirection()} width={25}>Iniciar sesión</Botones>
+          <Boton className="Inicio-boton" onClick = {redirection} width={25}>Iniciar sesión</Boton>
         </Container>
         <Container className="Inicio-abajo">
           <p>¿Eres nuevo en Chatu?</p>
-          <Vinculos direccion="register" > Clickea aquí</Vinculos>
+          <Vinculo direccion="register" > Clickea aquí</Vinculo>
         </Container>
       </Container>
     </>

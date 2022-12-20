@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom";
 
-export default function Vinculos({children, direccion}) {
+export default function Vinculo({children, direccion}) {
 
   const navigate = useNavigate();
 

@@ -1,9 +1,9 @@
-import {useState} from "react";
 import Container from "react-bootstrap/Container";
-import Botones from "../components/Botones";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import Boton from "../components/Boton";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
-import {useNavigate} from "react-router-dom";
 
 export default function Login() {
 
@@ -19,7 +19,7 @@ export default function Login() {
         method: "POST",
         mode: "cors",
         headers: {
-          "Content-Type": "application/json", /* Enviamos un json */
+          "Content-Type": "application/json",
           Accept:"aplication/json",
         "Access-Control-Allow-Origin":"*",
         },
@@ -30,31 +30,23 @@ export default function Login() {
           }
         })
       });
-      
       alert(res.data)
-      if(res.status === 200)
-      {
-
-
+      if(res.status === 200) {
         alert("✅" + res)
         Redirection("/publications")
-      }
-      else
-      {
+      } else {
         alert("❌" + "Correo y/o Contraseña Incorrectos.")
-
       }
     } catch (e) {
       alert("❌" + e.message)
     }
-
 
 }
 
   return (
     <form onSubmit={onSubmit}>
       <Container className="Login">
-        <Titulo>👋 Hola de nuevo.</Titulo>
+        <Titulo>👋 Hola de nuevo</Titulo>
         <Container className="Login-mitad">
           <Container className="Login-usuario">
             <p>Email</p>
@@ -65,11 +57,11 @@ export default function Login() {
             <IngresarTexto onChange={(e) => setPassword(e.target.value)} type={"password"}/>
           </Container>
         </Container>
-        <Botones
+        <Boton
           type="submit"
           width={30}>
           Iniciar sesión
-        </Botones>
+        </Boton>
       </Container>
     </form>
   );

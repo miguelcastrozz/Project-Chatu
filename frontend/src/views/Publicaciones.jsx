@@ -1,9 +1,9 @@
-import BarradeNav from "../components/barra";
+import BarradeNav from "../components/Barra";
 import Publicar from "../components/Publicar";
 import Container from "react-bootstrap/esm/Container";
 import { Row } from "react-bootstrap";
 import "../stylesheets/app.css";
-import Publicacion from "../components/publicacion";
+import Publicacion from "../components/Publicacion";
 
 export default function Publicaciones() {
   //inserte el nombre de usuario de la persona que ingreso
