@@ -4,11 +4,6 @@ import Boton from "./../components/Boton";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
 
-const nombre = "Ingrse un nombre para reconocerlo";
-const nombreDUsuario = "Ingrese un nombre de usuario";
-const correo = "Ingrese su correo";
-const contraseña = "Ingrese una contraseña";
-
 export default function Registro() {
   async function onSubmit(e) {
     e.preventDefault();
@@ -17,20 +12,19 @@ export default function Registro() {
         method: "POST",
         mode: "cors",
         headers: {
-          "Content-Type": "application/json", /* Enviamos un json */
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           usuario: {
             nombre: nombre,
             nombre_usuario: usuario,
             correo: correo,
-            anio_nacimiento: anio,
+            anio_nacimiento: year,
             contrasenia: password,
           }
         })
       });
-      console.log(respuesta.respuesta)
-      alert("✅" + respuesta)
+      alert("✅ USUARIO REGISTRADO " + respuesta)
     } catch (e) {
       alert("❌" + e.message)
     }
@@ -39,7 +33,7 @@ export default function Registro() {
   const [nombre, setNombre] = useState("");
   const [usuario, setUsuario] = useState("");
   const [correo, setCorreo] = useState("");
-  const [anio, setAnio] = useState("");
+  const [year, setYear] = useState("");
   const [password, setPassword] = useState("");
 
   return (
@@ -55,9 +49,10 @@ export default function Registro() {
         <p>Contraseña</p>
         <IngresarTexto onChange={(e) => setPassword(e.target.value)} type="password">Contraseña </IngresarTexto>
         <p>Año de nacimiento</p>
-        <IngresarTexto onChange={(e) => setAnio(e.target.value)} type="year">año de nacimiento</IngresarTexto>
+        <IngresarTexto onChange={(e) => setYear(e.target.value)} type="year">año de nacimiento</IngresarTexto>
         <Boton width={40}>Crear Cuenta</Boton>
       </Container>
     </form>
   );
+
 }
