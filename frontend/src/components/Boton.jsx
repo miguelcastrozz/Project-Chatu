@@ -5,7 +5,6 @@ export default function Boton({ children, onClick, height, type, width}) {
   const styles = {
     width: `${width}rem`,
     height: `${height}rem`,
-    margin: "0 auto",
   };
 
   return (

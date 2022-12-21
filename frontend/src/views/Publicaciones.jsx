@@ -1,18 +1,17 @@
 import BarradeNav from "../components/Barra";
 import Publicar from "../components/Publicar";
 import Container from "react-bootstrap/esm/Container";
-import {Row} from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import "../stylesheets/app.css";
 import Publication from "../components/Publication";
+import Multimedia from "../components/multimedia";
 
 export default function Publicaciones() {
-
   // Inserte el nombre de usuario de la persona que ingreso
 
   function saludar(nombre) {
-    return (
-      `Bienvenido, ${nombre}`
-    );
+    
+    return `Bienvenido, ${nombre}`;
   }
 
   // Componente publication
@@ -21,6 +20,7 @@ export default function Publicaciones() {
     return (
       <Publication>
         <h1>{titulo}</h1>
+        <Multimedia></Multimedia>
         <p className="parrafo">{Contenido}</p>
       </Publication>
     );
@@ -43,8 +43,8 @@ export default function Publicaciones() {
           <Container className="Publicaciones-feed">
             <Publicar></Publicar>
             <Container className="Publicaciones-vista">
-              <h1 className="Publi">Publicaciones</h1>
-              {publicar("Publicación de acción","La familia es primero")}
+              <h1 className="Publi">Publicaciones:</h1>
+              {publicar("Publicación de acción", "La familia es primero")}
               {publicar("Publicación de terror", "Chucky da miedo")}
               {publicar("Publicación de humor", "El agua moja")}
             </Container>
@@ -53,5 +53,4 @@ export default function Publicaciones() {
       </Container>
     </>
   );
-
 }

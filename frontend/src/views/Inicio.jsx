@@ -26,7 +26,7 @@ export default function Inicio() {
         </Container>
         <Container className="Inicio-abajo">
           <p>¿Eres nuevo en Chatu?</p>
-          <Vinculo direccion="register" > Clickea aquí</Vinculo>
+          <Vinculo direccion="register" > Clickea aquí. </Vinculo>
         </Container>
       </Container>
     </>
