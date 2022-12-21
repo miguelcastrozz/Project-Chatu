@@ -10,9 +10,9 @@ export async function createUser(req, res) {
   let documento;
   try {
     documento = await userModel.create(usuario);
-    res.status(201).json(documento);
+    res.status(201).json({respuesta:"OK", data:documento});
   } catch (terrible) {
-    res.status(400).json(terrible.message);
+    res.status(400).json({respuesta:"ERROR", data:terrible.message});
   }
 }
 
@@ -32,23 +32,17 @@ export async function readUser(req, res) {
 export async function LoginUser(req, res) {
   const usuario = req.body.login;
   const ACCESS_TOKEN = "2f9359f60fa849011aaf711a4332e84a13283b568230317fee84ad9cd1dc71b887c1fcaf10a4704697e26e26f697fa27b57b21e1f3669c89c930f8e65adda1a1";
-  let documento;
-  documento = await userModel.findOne({
-    nombre_usuario: usuario.nombre_usuario,
-  });
-  try {
-    const acceso = await bcrypt.compare(
-      usuario.contrasenia,
-      documento.contrasenia
-    );
+  let documento = await userModel.findOne({correo: usuario.correo });
+  if(!documento) {
+    res.status(404).json({respuesta:"ERROR", data:"User not found"});
+  } else {
+    const acceso = await bcrypt.compare(usuario.contrasenia, documento.contrasenia);
     if (acceso) {
-      const token = jwt.sign(usuario.nombre_usuario, ACCESS_TOKEN);
-      res.status(200).json(token);
+      const token = jwt.sign(usuario.correo, ACCESS_TOKEN);
+      res.status(200).json({respuesta:"OK", data:token});
     } else {
-      res.sendStatus(401);
+      res.status(401).json({respuesta:"ERROR", data:"Unauthorized"});
     }
-  } catch (terrible) {
-    res.status(400).json(terrible.message);
   }
 }
 
