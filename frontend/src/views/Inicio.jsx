@@ -26,8 +26,10 @@ export default function Inicio() {
         </Container>
         <Container className="Inicio-abajo">
           <p>¿Eres nuevo en Chatu?</p>
-          <Vinculo direccion="register" > Clickea aquí</Vinculo>
         </Container>
+        <div className="text-center">
+        <Vinculo direccion="register"> Clickea aquí</Vinculo>
+        </div>
       </Container>
     </>
   );

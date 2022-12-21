@@ -1,17 +1,5 @@
-<<<<<<< HEAD
+
 import React from "react";
-
-import { useParams } from "react-router-dom";
-
-function publicacion(){
-
-
-  return(
-    <h1>
-      Estas viendo publicaciones
-    </h1>
-  )
-=======
 import BarradeNav from "../components/Barra";
 import Publicar from "../components/Publicar";
 import Container from "react-bootstrap/esm/Container";
@@ -67,8 +55,8 @@ export default function Publicaciones() {
       </Container>
     </>
   );
->>>>>>> fd58c31fef3e1ca1ca19d8ff7f41364b08dc0b6e
+
 
 }
 
-export default publicacion
+

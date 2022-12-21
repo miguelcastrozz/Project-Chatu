@@ -21,7 +21,7 @@ export default function Ingreso() {
         Contraseña:
       </Texto>
 
-      <Boton x={31} y={20} width={long}>
+      <Boton x={31} y={20} width={length}>
         Iniciar sesión
       </Boton>
     </div>

@@ -34,7 +34,7 @@ export default function Login() {
         alert("✅ BIENVENIDO A CHATU")
         Redirection("/publications")
       } else {
-        alert("❌ Correo y/o Contraseña Incorrectos.") /* TODO - Eliminar mensajes adicionales */
+        alert("❌ Correo y/o Contraseña Incorrectos121.") /* TODO - Eliminar mensajes adicionales */
       }
     } catch (e) {
       alert("❌ " + e.message)
