@@ -9,10 +9,9 @@ import loginRouter from "./loginRouter.js";
 const apiRouter = express.Router();
 
 apiRouter.use("/comentarios", commentRouter);
+apiRouter.use("/login", loginRouter);
 apiRouter.use("/publicaciones", publicRouter);
 apiRouter.use("/usuarios", userRouter);
 apiRouter.use("/token", tokenRouter);
-apiRouter.use("/login", loginRouter);
-
 
 export default apiRouter;

@@ -10,7 +10,6 @@ export default function Login() {
   const Redirection = useNavigate();
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   async function onSubmit(e) {
     e.preventDefault();
@@ -20,8 +19,8 @@ export default function Login() {
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
-          Accept:"aplication/json",
-        "Access-Control-Allow-Origin":"*",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
           login: {
@@ -31,17 +30,16 @@ export default function Login() {
         })
       });
       alert(res.data)
-      if(res.status === 200) {
-        alert("✅" + res)
+      if (res.status === 200) {
+        alert("✅ BIENVENIDO A CHATU")
         Redirection("/publications")
       } else {
-        alert("❌" + "Correo y/o Contraseña Incorrectos.")
+        alert("❌ Correo y/o Contraseña Incorrectos.") /* TODO - Eliminar mensajes adicionales */
       }
     } catch (e) {
-      alert("❌" + e.message)
+      alert("❌ " + e.message)
     }
-
-}
+  }
 
   return (
     <form onSubmit={onSubmit}>
@@ -53,15 +51,11 @@ export default function Login() {
             <IngresarTexto onChange={(e) => setCorreo(e.target.value)} type="email"></IngresarTexto>
           </Container>
           <Container className="Login-contraseña">
-            <p>Contraseña:</p>
+            <p>Contraseña</p>
             <IngresarTexto onChange={(e) => setPassword(e.target.value)} type={"password"}/>
           </Container>
         </Container>
-        <Boton
-          type="submit"
-          width={30}>
-          Iniciar sesión
-        </Boton>
+        <Boton type="submit" width={30}>Iniciar sesión</Boton>
       </Container>
     </form>
   );

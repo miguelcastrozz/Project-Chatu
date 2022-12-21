@@ -188,14 +188,14 @@ nav {
   padding: 1rem;
 }
 
-.Publicacion_contenido {
+.Publication_contenido {
   background-color: grey;
   border-radius: 1rem;
   margin-top: 1rem;
   padding: 1rem;
 }
 
-.Publicacion_contenido > h1 {
+.Publication_contenido > h1 {
   font-size: 3rem;
   font-family: sans-serif;
 }

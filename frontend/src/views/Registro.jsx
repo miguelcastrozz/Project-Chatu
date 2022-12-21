@@ -8,7 +8,7 @@ export default function Registro() {
   async function onSubmit(e) {
     e.preventDefault();
     try {
-      const respuesta = await fetch("http://localhost:8080/api/usuarios", {
+      await fetch("http://localhost:8080/api/usuarios", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -24,7 +24,7 @@ export default function Registro() {
           }
         })
       });
-      alert("✅ USUARIO REGISTRADO " + respuesta)
+      alert("✅ USUARIO REGISTRADO")
     } catch (e) {
       alert("❌" + e.message)
     }
