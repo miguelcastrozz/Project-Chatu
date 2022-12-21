@@ -1,13 +1,16 @@
-import {createContext} from "react";
+import { createContext } from "react";
 
 export const ComentariosContext = createContext();
 
-export function InicioSessionContextProvider(props) {
+export function ComentariosContextProvider(props) {
   // IMPLEMENTACIÓN
   return (
-    <ComentariosContext.Provider value={{
-      // ITEMS
-    }}>
-    </ComentariosContext.Provider>
+    <ComentariosContext.Provider
+      value={
+        {
+          // ITEMS
+        }
+      }
+    ></ComentariosContext.Provider>
   );
 }
