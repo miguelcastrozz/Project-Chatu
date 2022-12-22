@@ -66,6 +66,7 @@ export default function Publicaciones() {
           </Container>
         </Row>
       </Container>
+
     </>
   );
 }
