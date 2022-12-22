@@ -5,5 +5,3 @@ export default function Publicaciones() {
     </>
   );
 }
-
-export default publicacion
