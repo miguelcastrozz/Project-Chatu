@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export default function Publicaciones() {
-  return (
-    <>
-      <h1>PUBLICACIONES</h1>
-=======
 import BarradeNav from "../components/Barra.jsx";
 import Publicar from "../components/Publicar.jsx";
 import Container from "react-bootstrap/esm/Container";
@@ -16,7 +10,7 @@ export default function Publicaciones() {
   // Inserte el nombre de usuario de la persona que ingreso
 
   function saludar(nombre) {
-    
+
     return `Bienvenido, ${nombre}`;
   }
 
@@ -57,7 +51,7 @@ export default function Publicaciones() {
           </Container>
         </Row>
       </Container>
->>>>>>> 7ff161c9368a74fda0c0856bc32b118a89168c25
+
     </>
   );
 }
