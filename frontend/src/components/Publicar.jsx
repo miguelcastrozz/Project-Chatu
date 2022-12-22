@@ -12,7 +12,7 @@ export default function Publicar() {
         <p>Imagen:</p>
         <IngresarTexto type="file" className="Publicar-subir-contenido" />
         <p>contenido:</p>
-        <IngresarTexto placeholder="Ingrese su publicacion" height={8} />
+        <textarea className="Publicar-publicacion-parrafo"/>
         <Boton type="submit" width={20}>
           Publicar
         </Boton>
