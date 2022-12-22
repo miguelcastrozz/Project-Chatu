@@ -1,9 +1,9 @@
-import BarradeNav from "../components/Barra";
-import Publicar from "../components/Publicar";
+import BarradeNav from "../components/Barra.jsx";
+import Publicar from "../components/Publicar.jsx";
 import Container from "react-bootstrap/esm/Container";
 import {Row} from "react-bootstrap";
 import "../stylesheets/app.css";
-import Publication from "../components/Publication";
+import Publication from "../components/Publication.jsx";
 
 export default function Publicaciones() {
 
