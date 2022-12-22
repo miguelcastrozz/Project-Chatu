@@ -17,7 +17,7 @@ export default function Registro() {
         },
         body: JSON.stringify({
           usuario: {
-            nombre: nombre,
+            nombre: nombre.toUpperCase,
             nombre_usuario: usuario,
             correo: correo,
             anio_nacimiento: year,
