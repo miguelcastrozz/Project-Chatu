@@ -10,6 +10,5 @@ export default function Titulo({children, width}) {
   return (
     <h1 style={styles} className="titulo">{children}</h1>
   );
-  
 
 }

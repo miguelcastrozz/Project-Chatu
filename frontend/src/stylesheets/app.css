@@ -150,17 +150,33 @@ nav {
   border-radius: 1rem;
 }
 
-.Publicar-formulario * {
+.Publicar-formulario > p {
+  margin-top: 3rem;
+}
+
+.Publicar-boton {
   margin-top: 2rem;
+}
+
+.Publicar-subir-contenido {
+  background-color: var(--main-color);
 }
 
 .Perfil {
   background-color: gray;
   border-radius: 3rem;
-  margin-top: 1rem;
-  margin-right: 2rem;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
   width: 4rem;
   height: 4rem;
+}
+
+.imagenes {
+  height: 15rem;
+  width: 25rem;
+  background-color: white;
+  margin: 2rem auto;
+  border-radius: 1rem;
 }
 
 .Publi {
@@ -200,14 +216,27 @@ nav {
   font-family: sans-serif;
 }
 
+.Publicaciones-Pub {
+  background-color: azure;
+}
+
+.Publicaciones-bar {
+  display: flex;
+  align-items: center;
+}
+
+.Publicaciones-bar * {
+  margin-left: 1rem;
+}
+
+.Publicaciones-bar > p {
+  font-size: 2rem;
+}
+
 .parrafo::first-letter {
   color: red;
   font-size: 2rem;
   font-weight: 900;
-}
-
-.Publicaciones-Pub {
-  background-color: azure;
 }
 
 @keyframes appear {

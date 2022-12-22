@@ -1,9 +1,9 @@
 import Container from "react-bootstrap/Container";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import Boton from "../components/Boton";
-import IngresarTexto from "../components/IngresarTexto";
-import Titulo from "../components/Titulo";
+import Boton from "../components/Boton.jsx";
+import IngresarTexto from "../components/IngresarTexto.jsx";
+import Titulo from "../components/Titulo.jsx";
 
 export default function Login() {
 
