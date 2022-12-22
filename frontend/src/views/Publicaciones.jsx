@@ -1,27 +1,42 @@
 import BarradeNav from "../components/Barra.jsx";
 import Publicar from "../components/Publicar.jsx";
 import Container from "react-bootstrap/esm/Container";
-import { Row } from "react-bootstrap";
+import { Form, Row } from "react-bootstrap";
 import "../stylesheets/app.css";
 import Multimedia from "../components/multimedia";
 import Publication from "../components/Publication.jsx";
+import Boton from "../components/Boton.jsx";
 
 export default function Publicaciones() {
   // Inserte el nombre de usuario de la persona que ingreso
 
   function saludar(nombre) {
-
     return `Bienvenido, ${nombre}`;
   }
 
-  // Componente publication
+  function comentario(comentario){
+     return(
+          <Container className = "publicacion-comentario">
 
+          </Container>
+     )
+  }
+
+  // Componente publication
   function publicar(titulo, Contenido) {
     return (
       <Publication>
         <h1>{titulo}</h1>
         <Multimedia></Multimedia>
-        <p className="parrafo">{Contenido}</p>
+        <p className="Publicacion-parrafo">{Contenido}</p>
+        <Form className = "Publicar-comentario-apartado">
+          <textarea className="Publicar-comentario-parrafo" />
+          <Boton marginTop={0.5} marginLeft = {3}>Comentar</Boton>
+        </Form>
+
+        <Container className="Publicaciones-comentarios">
+
+        </Container>
       </Publication>
     );
   }
