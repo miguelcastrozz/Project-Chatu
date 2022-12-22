@@ -13,7 +13,6 @@ export default function IngresarTexto({ ...props }) {
           type={props.type}
           onChange={props.onChange}
           placeholder={props.placeholder}
-          className="me-2"
           aria-label="Search"
         />
       </Form>

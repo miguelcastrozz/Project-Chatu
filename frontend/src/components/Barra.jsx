@@ -6,13 +6,14 @@ import Logo from "../assets/logo.png";
 export default function BarradeNav({ ...props }) {
   const Logo_style = {
     borderRadius: "100%",
-    width: "3rem",
+    width: "4rem",
+    marginTop: "1rem",
   };
 
   return (
     <Row>
       <Col>
-        <Container className="Publicaciones-template">
+        <Container className="Publicaciones-bar">
           <img src={Logo} alt="" style={Logo_style} />
           <p>Chatu</p>
         </Container>
