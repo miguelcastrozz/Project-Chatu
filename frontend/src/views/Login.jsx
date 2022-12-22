@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import Boton from "../components/Boton";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
+import swal from 'sweetalert'
 
 export default function Login() {
 
@@ -29,15 +30,13 @@ export default function Login() {
           }
         })
       });
-      alert(res.data)
+      swal(res.data)
       if (res.status === 200) {
-        alert("✅ BIENVENIDO A CHATU")
+        swal("BIENVENIDO A CHATU", "Donde las opiniones convergen", "success" )
         Redirection("/publications")
-      } else {
-        alert("❌ Correo y/o Contraseña Incorrectos121.") /* TODO - Eliminar mensajes adicionales */
       }
     } catch (e) {
-      alert("❌ " + e.message)
+      swal("Oops!!","Correo y/o Contraseña Incorrectos.", "error")
     }
   }
 

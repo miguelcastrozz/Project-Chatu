@@ -38,7 +38,7 @@ export default function Publicaciones() {
         </Row>
         <Row>
           <Container className="Publicaciones-saludo">
-            <h1>{saludar("juan")}</h1>
+            <h1>{saludar("Acá nombre de usuario")}</h1>
           </Container>
         </Row>
         <Row>

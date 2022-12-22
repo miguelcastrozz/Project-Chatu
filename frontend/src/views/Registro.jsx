@@ -1,8 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Boton from "./../components/Boton";
 import IngresarTexto from "../components/IngresarTexto";
 import Titulo from "../components/Titulo";
+import swal from 'sweetalert'
 
 export default function Registro() {
   async function onSubmit(e) {
@@ -24,9 +25,9 @@ export default function Registro() {
           }
         })
       });
-      alert("✅ USUARIO REGISTRADO")
+      swal('Bienvenid@ ' + nombre, 'Tu registro ha sido exitoso', 'success')
     } catch (e) {
-      alert("❌" + e.message)
+      swal("Oops!", "Algo salió mal " + e.message, "error")
     }
   }
 
@@ -38,21 +39,31 @@ export default function Registro() {
 
   return (
     <form onSubmit={onSubmit}>
-      <Container className="Registro">
-        <Titulo>¡Hola!</Titulo>
-        <p>Nombre</p>
-        <IngresarTexto onChange={(e) => setNombre(e.target.value)}></IngresarTexto>
-        <p>Nombre de usuario</p>
-        <IngresarTexto onChange={(e) => setUsuario(e.target.value)}></IngresarTexto>
-        <p>Email</p>
-        <IngresarTexto onChange={(e) => setCorreo(e.target.value)} type="email">Email </IngresarTexto>
-        <p>Contraseña</p>
-        <IngresarTexto onChange={(e) => setPassword(e.target.value)} type="password">Contraseña </IngresarTexto>
-        <p>Año de nacimiento</p>
-        <IngresarTexto onChange={(e) => setYear(e.target.value)} type="year">año de nacimiento</IngresarTexto>
-        <Boton width={40}>Crear Cuenta</Boton>
-      </Container>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6 offset-3">
+            <Container className="Registro">
+              <Titulo>¡Hola!</Titulo>
+              <p>Nombre</p>
+              <IngresarTexto onChange={(e) => setNombre(e.target.value)}></IngresarTexto>
+              <hr className="mt-2"></hr>
+              <p>Nombre de usuario </p>
+              <IngresarTexto onChange={(e) => setUsuario(e.target.value)}></IngresarTexto>
+              <hr className="mt-2"></hr>
+              <p>E-mail </p>
+              <IngresarTexto onChange={(e) => setCorreo(e.target.value)}></IngresarTexto>
+              <hr className="mt-2"></hr>
+              <p>Contraseña </p>
+              <IngresarTexto onChange={(e) => setPassword(e.target.value)} type={"password"}></IngresarTexto>
+              <hr className="mt-2"></hr>
+              <p>Año de nacimiento </p>
+              <IngresarTexto onChange={(e) => setYear(e.target.value)}></IngresarTexto>
+              <hr className="mt-2"></hr>
+              <Boton>Crear Cuenta</Boton>
+            </Container>
+          </div>
+        </div>
+      </div>
     </form>
   );
-
 }
