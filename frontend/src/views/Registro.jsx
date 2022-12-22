@@ -1,8 +1,8 @@
 import {useState} from "react";
 import Container from "react-bootstrap/Container";
-import Boton from "./../components/Boton";
-import IngresarTexto from "../components/IngresarTexto";
-import Titulo from "../components/Titulo";
+import Boton from "../components/Boton.jsx";
+import IngresarTexto from "../components/IngresarTexto.jsx";
+import Titulo from "../components/Titulo.jsx";
 
 export default function Registro() {
   async function onSubmit(e) {
@@ -49,7 +49,7 @@ export default function Registro() {
         <p>Contraseña</p>
         <IngresarTexto onChange={(e) => setPassword(e.target.value)} type="password">Contraseña </IngresarTexto>
         <p>Año de nacimiento</p>
-        <IngresarTexto onChange={(e) => setYear(e.target.value)} type="year">año de nacimiento</IngresarTexto>
+        <IngresarTexto onChange={(e) => setYear(e.target.value)} type="year">Año de nacimiento</IngresarTexto>
         <Boton width={40}>Crear Cuenta</Boton>
       </Container>
     </form>
