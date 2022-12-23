@@ -7,8 +7,9 @@ export default function Publicar() {
   return (
     <Container className="Publicar-formulario">
       <Form>
-        <IngresarTexto placeholder="Ingrese su publicacion" height={8} />
-        <Boton width={5}>Publicar</Boton>
+        <IngresarTexto height="15" placeholder="Ingrese su publicación"/>
+        <hr className="mt-2" />
+        <Boton>Publicar</Boton>
       </Form>
     </Container>
   );

@@ -51,7 +51,7 @@ export default function Principal() {
         ¿Eres nuevo?, puedes crear una cuenta <br />
         <Anchor x={6} y={0} direccion={"register"}>
           <br />
-          Clickea aquí
+          Click aquí
         </Anchor>
       </Subtitulo>
     </div>

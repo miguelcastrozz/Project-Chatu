@@ -11,11 +11,11 @@ export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Inicio />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Registro />}></Route>
-        <Route path="/publications" element={<Publicaciones />}></Route>
-        <Route path="*" element={<h1>404 NOT FOUND</h1>}></Route>
+        <Route path="/" element={<Inicio />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<Registro />}/>
+        <Route path="/publications" element={<Publicaciones />}/>
+        <Route path="*" element={<h1>404 NOT FOUND</h1>}/>
       </Routes>
     </div>
   );
