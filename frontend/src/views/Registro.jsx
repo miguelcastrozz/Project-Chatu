@@ -24,9 +24,9 @@ export default function Registro() {
           }
         })
       });
-      alert("✅ USUARIO REGISTRADO")
+      alert("✅ USUARIO REGISTRADO");
     } catch (e) {
-      alert("❌" + e.message)
+      alert("❌ ERROR: " + e.message);
     }
   }
 

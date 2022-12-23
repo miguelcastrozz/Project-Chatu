@@ -1,0 +1,4 @@
+1. Eliminar los mensajes de login
+2. El usuario no puede ir a otra vista si no ha iniciado sesión
+3. Cargar publicaciones desde la base de datos
+4.

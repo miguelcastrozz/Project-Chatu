@@ -8,6 +8,8 @@ import Publication from "../components/Publication.jsx";
 import Boton from "../components/Boton.jsx";
 
 export default function Publicaciones() {
+
+
   // Inserte el nombre de usuario de la persona que ingreso
 
   function saludar(nombre) {
