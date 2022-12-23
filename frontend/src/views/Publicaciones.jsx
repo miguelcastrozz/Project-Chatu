@@ -34,13 +34,12 @@ export default function Publicaciones() {
         <Container className="Publicar-comentario-apartado">
           <Form>
             <textarea className="Publicar-comentario-parrafo" />
-            <Boton marginTop={0.5} marginLeft={2}>
+            <Boton marginTop={0.5} marginLeft={0.1} width={15}>
               Comentar
             </Boton>
           </Form>
         </Container>
         <Container className="Publicaciones-comentarios">
-          <h1>comentarios:</h1>
           {comentarios}
         </Container>
       </Publication>
@@ -69,6 +68,7 @@ export default function Publicaciones() {
                 comentario("el diablo manito"),
                 comentario("wtf!!"),
                 comentario("la esclavitud deberia ser legal."),
+                comentario("me debes peso"),
               ])}
               {publicar("Publicación de terror", "Chucky da miedo")}
               {publicar("Publicación de humor", "El agua moja")}

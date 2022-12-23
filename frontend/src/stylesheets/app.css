@@ -250,7 +250,8 @@ nav {
 }
 .Publicar-comentario-parrafo {
   width: 60rem;
-  height: 5rem;
+  height: 10rem;
+  border-radius: 0.8rem;
   color: black;
   margin-bottom: 1rem;
 }

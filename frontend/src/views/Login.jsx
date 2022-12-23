@@ -1,12 +1,11 @@
 import Container from "react-bootstrap/Container";
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Boton from "../components/Boton.jsx";
 import IngresarTexto from "../components/IngresarTexto.jsx";
 import Titulo from "../components/Titulo.jsx";
 
 export default function Login() {
-
   const Redirection = useNavigate();
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
@@ -25,19 +24,21 @@ export default function Login() {
         body: JSON.stringify({
           login: {
             correo: correo,
-            contrasenia: password
-          }
-        })
+            contrasenia: password,
+          },
+        }),
       });
-      alert(res.data)
+      alert(res.data);
       if (res.status === 200) {
-        alert("✅ BIENVENIDO A CHATU")
-        Redirection("/publications")
+        alert("✅ BIENVENIDO A CHATU");
+        Redirection("/publications");
       } else {
-        alert("❌ Correo y/o Contraseña Incorrectos.") /* TODO - Eliminar mensajes adicionales */
+        alert(
+          "❌ Correo y/o Contraseña Incorrectos."
+        ); /* TODO - Eliminar mensajes adicionales */
       }
     } catch (e) {
-      alert("❌ " + e.message)
+      alert("❌ " + e.message);
     }
   }
 
@@ -48,16 +49,23 @@ export default function Login() {
         <Container className="Login-mitad">
           <Container className="Login-usuario">
             <p>Email</p>
-            <IngresarTexto onChange={(e) => setCorreo(e.target.value)} type="email"></IngresarTexto>
+            <IngresarTexto
+              onChange={(e) => setCorreo(e.target.value)}
+              type="email"
+            ></IngresarTexto>
           </Container>
           <Container className="Login-contraseña">
             <p>Contraseña</p>
-            <IngresarTexto onChange={(e) => setPassword(e.target.value)} type={"password"}/>
+            <IngresarTexto
+              onChange={(e) => setPassword(e.target.value)}
+              type={"password"}
+            />
           </Container>
         </Container>
-        <Boton type="submit" width={30}>Iniciar sesión</Boton>
+        <Boton type="submit" width={30}>
+          Iniciar sesión
+        </Boton>
       </Container>
     </form>
   );
-
 }
