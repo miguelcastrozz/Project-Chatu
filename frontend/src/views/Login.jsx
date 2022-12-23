@@ -6,6 +6,7 @@ import IngresarTexto from "../components/IngresarTexto.jsx";
 import Titulo from "../components/Titulo.jsx";
 
 export default function Login() {
+
   const Redirection = useNavigate();
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");

@@ -3,7 +3,11 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export async function createUser(req, res) {
+  // Para llegar a esta ruta uzamos el método POST
+  // http://localhost:8080/api/usuarios
+
   const usuario = req.body.usuario;
+  console.log(usuario);
   const { nombre, nombre_usuario, contrasenia, correo, anio_nacimiento } = req.body.usuario;
   const salt = await bcrypt.genSalt(10);
   usuario.contrasenia = await bcrypt.hash(contrasenia, salt);
