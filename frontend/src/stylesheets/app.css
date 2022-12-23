@@ -162,6 +162,10 @@ nav {
   background-color: var(--main-color);
 }
 
+.Publicar-comentario-parrafo > p {
+  max-width: 60rem;
+}
+
 .Perfil {
   background-color: gray;
   border-radius: 3rem;

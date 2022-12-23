@@ -26,17 +26,19 @@ export default function Publicaciones() {
   function publicar(titulo, Contenido, comentarios) {
     return (
       <Publication>
-        <h1>{titulo}</h1>
-        <Multimedia></Multimedia>
-        <p className="Publicacion-parrafo">{Contenido}</p>
+        <Container className="Publicacion-top">
+          <h1>{titulo}</h1>
+          <Multimedia></Multimedia>
+          <p className="Publicacion-parrafo">{Contenido}</p>
+        </Container>
         <Form className="Publicar-comentario-apartado">
           <textarea className="Publicar-comentario-parrafo" />
-          <Boton marginTop={0.5} marginLeft={3}>
+          <Boton marginTop={0.5} marginLeft={2}>
             Comentar
           </Boton>
         </Form>
-
         <Container className="Publicaciones-comentarios">
+          <h1>comentarios:</h1>
           {comentarios}
         </Container>
       </Publication>
