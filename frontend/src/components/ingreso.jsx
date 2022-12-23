@@ -1,8 +1,8 @@
 import "../style-sheets/app.css";
 
-import Boton from "./toolbox/boton";
+import Boton from "./toolbox/Button";
 import Texto from "./toolbox/Input";
-import Titulo from "./toolbox/titulo";
+import Titulo from "./toolbox/Titulo";
 
 export default function Ingreso() {
   const long = 18;
@@ -22,7 +22,7 @@ export default function Ingreso() {
       </Texto>
 
       <Boton x={31} y={20} width={long}>
-        Iniciar sesión.
+        Iniciar sesión
       </Boton>
     </div>
   );

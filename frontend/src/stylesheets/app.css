@@ -1,0 +1,303 @@
+nav {
+  color: white;
+}
+
+.titulo {
+  font-size: 5rem;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.Inicio {
+  color: white;
+  background-color: var(--main-color);
+  padding: 3rem;
+  width: 100%;
+  font-family: sans-serif;
+
+  animation: appear;
+  animation-duration: 1.5s;
+
+  border-radius: 1rem;
+}
+
+.Inicio-boton {
+  font-weight: normal;
+}
+
+.Inicio-arriba {
+  display: flex;
+  margin: 2rem auto auto auto;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+}
+
+.Inicio-medio {
+  margin: 10rem auto auto auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Inicio-abajo {
+  margin: 4rem auto auto auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: sans-serif;
+}
+
+.Link {
+  color: white;
+  transition: 1s;
+}
+
+.Link:hover {
+  transition: 1s;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--complementary-color-2);
+}
+
+.Login {
+  background-color: var(--main-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  color: white;
+  font-family: sans-serif;
+
+  animation: appear;
+  animation-duration: 1.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login-usuario {
+  margin-top: 2rem;
+}
+
+.Login-usuario > p {
+  margin-bottom: 1rem;
+}
+
+.Login-contraseña {
+  margin-top: 2rem;
+}
+
+.Login-contraseña > p {
+  margin-bottom: 1rem;
+}
+
+.Login-mitad {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Registro {
+  background-color: var(--main-color);
+  font-family: sans-serif;
+  color: white;
+
+  padding: 2rem;
+  border-radius: 10px;
+
+  animation: appear;
+  animation-duration: 1.5s;
+}
+
+.Registro * {
+  margin-top: 0.1rem;
+}
+
+.Registro-form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Registro-form > p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Publicaciones * {
+  color: white;
+}
+
+.Publicaciones-navbar {
+  background-color: var(--main-color);
+  padding: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
+.Publicaciones-saludo {
+  margin-top: 2rem;
+  padding: 2rem;
+  font-size: 3rem;
+  font-family: sans-serif;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 1rem;
+}
+
+.Publicar-formulario > p {
+  margin-top: 3rem;
+}
+
+.Publicar-boton {
+  margin-top: 2rem;
+}
+
+.Publicar-subir-contenido {
+  background-color: var(--main-color);
+}
+
+.Publicar-comentario-parrafo > p {
+  max-width: 60rem;
+}
+
+.Perfil {
+  background-color: gray;
+  border-radius: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.imagenes {
+  height: 15rem;
+  width: 25rem;
+  background-color: white;
+  margin: 2rem auto;
+  border-radius: 1rem;
+}
+
+.Publi {
+  color: white;
+  margin: 3rem 2rem;
+  font-size: 4rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Publicaciones-feed {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-family: sans-serif;
+  background-color: var(--main-color);
+  border-radius: 1rem;
+}
+
+.Publicar_texto {
+  height: 5rem;
+}
+
+.Publicaciones-feed > div {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.Publication_contenido {
+  background-color: grey;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.Publication_contenido > h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+.Publicaciones-Pub {
+  background-color: azure;
+}
+
+.Publicaciones-bar {
+  display: flex;
+  align-items: center;
+}
+
+.Publicaciones-bar * {
+  margin-left: 1rem;
+}
+
+.Publicaciones-bar > p {
+  font-size: 2rem;
+}
+
+.Publicar-publicacion-parrafo {
+  width: 68rem;
+  padding: 1rem;
+  height: 10rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.Publicar-comentario-apartado {
+  width: 70rem;
+}
+.Publicar-comentario-parrafo {
+  width: 60rem;
+  height: 10rem;
+  border-radius: 0.8rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.publicacion-comentario {
+  background-color: var(--complementary-color-1);
+  margin-top: 1rem;
+  border-radius: 1rem;
+  width: 60rem;
+  padding: 1rem;
+  box-shadow: 20px 10px 10px rgb(33, 33, 33);
+}
+
+.Publicaciones-comentarios > h1 {
+  margin-left: 2rem;
+}
+
+.Publicaciones-comentarios {
+  margin-top: 1rem;
+}
+
+.publicacion-comentarios-caja {
+  width: 70rem;
+}
+
+.Publicar-comentario-apartado {
+  width: 60rem;
+}
+
+.Publicacion-top {
+  width: 60rem;
+}
+
+.Publicacion-top > h1 {
+  font-size: 5rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p {
+  margin: 1rem 0;
+}
