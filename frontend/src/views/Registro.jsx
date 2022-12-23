@@ -60,6 +60,7 @@ export default function Registro() {
               <IngresarTexto onChange={(e) => setYear(e.target.value)}></IngresarTexto>
               <hr className="mt-2"></hr>
               <Boton>Crear Cuenta</Boton>
+              <nombre/>
             </Container>
           </div>
         </div>

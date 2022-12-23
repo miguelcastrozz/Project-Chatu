@@ -42,7 +42,7 @@ export default function Login() {
 
   return (
     <form onSubmit={onSubmit}>
-      <Container className="Login">
+      <Container className="col-sm-7 offset-2 Login">
         <Titulo>👋 Hola de nuevo</Titulo>
         <Container className="Login-mitad">
           <Container className="Login-usuario">
