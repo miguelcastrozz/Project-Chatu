@@ -250,8 +250,6 @@ nav {
 }
 .Publicar-comentario-parrafo {
   width: 60rem;
-  margin-left: 3rem;
-  padding: 1rem;
   height: 5rem;
   color: black;
   margin-bottom: 1rem;
@@ -261,18 +259,33 @@ nav {
   background-color: var(--complementary-color-1);
   margin-top: 1rem;
   border-radius: 1rem;
+  width: 60rem;
   padding: 1rem;
   box-shadow: 20px 10px 10px rgb(33, 33, 33);
+}
+
+.Publicaciones-comentarios > h1 {
+  margin-left: 2rem;
+}
+
+.Publicaciones-comentarios {
+  margin-top: 1rem;
 }
 
 .publicacion-comentarios-caja {
   width: 70rem;
 }
 
-.parrafo::first-letter {
-  color: red;
-  font-size: 2rem;
-  font-weight: 900;
+.Publicar-comentario-apartado {
+  width: 60rem;
+}
+
+.Publicacion-top {
+  width: 60rem;
+}
+
+.Publicacion-top > h1 {
+  font-size: 5rem;
 }
 
 @keyframes appear {

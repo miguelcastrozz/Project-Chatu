@@ -31,12 +31,14 @@ export default function Publicaciones() {
           <Multimedia></Multimedia>
           <p className="Publicacion-parrafo">{Contenido}</p>
         </Container>
-        <Form className="Publicar-comentario-apartado">
-          <textarea className="Publicar-comentario-parrafo" />
-          <Boton marginTop={0.5} marginLeft={2}>
-            Comentar
-          </Boton>
-        </Form>
+        <Container className="Publicar-comentario-apartado">
+          <Form>
+            <textarea className="Publicar-comentario-parrafo" />
+            <Boton marginTop={0.5} marginLeft={2}>
+              Comentar
+            </Boton>
+          </Form>
+        </Container>
         <Container className="Publicaciones-comentarios">
           <h1>comentarios:</h1>
           {comentarios}
