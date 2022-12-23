@@ -14,28 +14,30 @@ export default function Publicaciones() {
     return `Bienvenido, ${nombre}`;
   }
 
-  function comentario(comentario){
-     return(
-          <Container className = "publicacion-comentario">
-
-          </Container>
-     )
+  function comentario(comentario) {
+    return (
+      <Container className="publicacion-comentario">
+        <p className="publicacion-comentarios-caja">{comentario}</p>
+      </Container>
+    );
   }
 
   // Componente publication
-  function publicar(titulo, Contenido) {
+  function publicar(titulo, Contenido, comentarios) {
     return (
       <Publication>
         <h1>{titulo}</h1>
         <Multimedia></Multimedia>
         <p className="Publicacion-parrafo">{Contenido}</p>
-        <Form className = "Publicar-comentario-apartado">
+        <Form className="Publicar-comentario-apartado">
           <textarea className="Publicar-comentario-parrafo" />
-          <Boton marginTop={0.5} marginLeft = {3}>Comentar</Boton>
+          <Boton marginTop={0.5} marginLeft={3}>
+            Comentar
+          </Boton>
         </Form>
 
         <Container className="Publicaciones-comentarios">
-
+          {comentarios}
         </Container>
       </Publication>
     );
@@ -59,14 +61,17 @@ export default function Publicaciones() {
             <Publicar></Publicar>
             <Container className="Publicaciones-vista">
               <h1 className="Publi">Publicaciones:</h1>
-              {publicar("Publicación de acción", "La familia es primero")}
+              {publicar("Publicación de acción", "La familia es primero", [
+                comentario("el diablo manito"),
+                comentario("wtf!!"),
+                comentario("la esclavitud deberia ser legal."),
+              ])}
               {publicar("Publicación de terror", "Chucky da miedo")}
               {publicar("Publicación de humor", "El agua moja")}
             </Container>
           </Container>
         </Row>
       </Container>
-
     </>
   );
 }

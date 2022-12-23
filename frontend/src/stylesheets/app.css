@@ -253,6 +253,18 @@ nav {
   margin-bottom: 1rem;
 }
 
+.publicacion-comentario {
+  background-color: var(--complementary-color-1);
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 20px 10px 10px rgb(33, 33, 33);
+}
+
+.publicacion-comentarios-caja {
+  width: 70rem;
+}
+
 .parrafo::first-letter {
   color: red;
   font-size: 2rem;
