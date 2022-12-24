@@ -1,3 +1,4 @@
+import { useContext, useEffect, useState } from "react";
 import BarradeNav from "../components/Barra.jsx";
 import Publicar from "../components/Publicar.jsx";
 import Container from "react-bootstrap/esm/Container";
@@ -6,6 +7,9 @@ import "../stylesheets/app.css";
 import Multimedia from "../components/multimedia";
 import Publication from "../components/Publication.jsx";
 import Boton from "../components/Boton.jsx";
+import { useCookies } from "react-cookie";
+import TokenContext from "../context/TokenContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Publicaciones() {
 
@@ -13,10 +17,22 @@ export default function Publicaciones() {
   // Inserte el nombre de usuario de la persona que ingreso
 
   function saludar(nombre) {
-    return `Bienvenido, ${nombre}`;
+    const Redirection = useNavigate();
+    const { token } = useContext(TokenContext);
+    const [cookies, setCookies] = useCookies(["token"]);
+//    const [cookies1, setCookies1] = useCookies(["user"]);
+    const currentToken = token ? token : cookies.token;
+    useEffect(() => {
+      if (token) {
+        return `Bienvenido, ${nombre}`;
+      } else {
+        Redirection("/login");
+      }
+    });
   }
 
   function comentario(comentario) {
+
     return (
       <Container className="publicacion-comentario">
         <p className="publicacion-comentarios-caja">{comentario}</p>
