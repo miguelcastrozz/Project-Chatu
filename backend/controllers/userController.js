@@ -39,8 +39,8 @@ export async function LoginUser(req, res) {
   } else {
     const acceso = await bcrypt.compare(usuario.contrasenia, documento.contrasenia);
     if (acceso) {
-      const token = jwt.sign(usuario.correo, ACCESS_TOKEN);
-      res.status(200).json({respuesta:"OK", data:token});
+      const vlrtoken = jwt.sign(documento.nombre_usuario, ACCESS_TOKEN);
+      res.status(200).json({respuesta:"OK", token:vlrtoken, user:documento.nombre_usuario});
     } else {
       res.status(401).json({respuesta:"ERROR", data:"Unauthorized"});
     }

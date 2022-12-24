@@ -1,26 +1,24 @@
-import UsuariosContext from "../context/UsuariosContext.jsx";
 import Container from "react-bootstrap/Container";
-
-import {useContext, useState} from "react";
-import {useNavigate} from "react-router-dom";
-
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Boton from "../components/Boton.jsx";
 import IngresarTexto from "../components/IngresarTexto.jsx";
 import Titulo from "../components/Titulo.jsx";
+import { useCookies } from "react-cookie";
+import TokenContext from "../context/TokenContext";
 
 export default function Login() {
-
+  const { setToken } = useContext(TokenContext); //Contexto Para el Token
+  //const { setUser } = useContext(UserContext); //Contexto Para el Usuario
   const Redirection = useNavigate();
-
-  const [user] = useContext(UsuariosContext);
-
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
+  const [cookies, setCookies] = useCookies(["token", "user"]);
 
   async function onSubmit(e) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8080/api/login", {
+      const doc = await fetch("http://localhost:8080/api/login", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -33,16 +31,19 @@ export default function Login() {
             correo: correo,
             contrasenia: password,
           },
-        }),
+        })
       });
-      alert(res.data);
-      if (res.status === 200) {
+      const resp = await doc.json();
+      setToken(resp.token);
+//      alert(resp.user);
+
+      if (doc.status === 200) {
         alert("✅ BIENVENIDO A CHATU");
+        setCookies("token", setToken, { path: "/" });
+//        setCookies("user", vlUser, { path: "/" });
         Redirection("/publications");
       } else {
-        alert(
-          "❌ Correo y/o Contraseña incorrectos."
-        ); /* TODO - Eliminar mensajes adicionales */
+        alert("❌ Correo y/o Contraseña Incorrectos."); /* TODO - Eliminar mensajes adicionales */
       }
     } catch (e) {
       alert("❌ " + e.message);
@@ -75,5 +76,4 @@ export default function Login() {
       </Container>
     </form>
   );
-
 }
