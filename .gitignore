@@ -57,3 +57,6 @@ logs
 *.log
 pnpm-debug.log*
 lerna-debug.log*
+
+# unimportant
+task.txt

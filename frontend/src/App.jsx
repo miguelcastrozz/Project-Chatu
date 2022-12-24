@@ -6,15 +6,16 @@ import Inicio from "./views/Inicio.jsx";
 import Login from "./views/Login.jsx";
 import Publicaciones from "./views/Publicaciones.jsx";
 import Registro from "./views/Registro.jsx";
+import {UsuarioProvider} from "./context/UsuariosContext.jsx";
 
 export default function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Inicio />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Registro />}></Route>
-        <Route path="/publications" element={<Publicaciones />}></Route>
+        <Route path="/login" element={<UsuarioProvider><Login /></UsuarioProvider>}></Route>
+        <Route path="/register" element={<UsuarioProvider><Registro /></UsuarioProvider>}></Route>
+        <Route path="/publications" element={<UsuarioProvider><Publicaciones /></UsuarioProvider>}></Route>
         <Route path="*" element={<h1>404 NOT FOUND</h1>}></Route>
       </Routes>
     </div>

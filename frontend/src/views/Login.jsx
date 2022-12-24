@@ -1,6 +1,9 @@
+import UsuariosContext from "../context/UsuariosContext.jsx";
 import Container from "react-bootstrap/Container";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
+import {useContext, useState} from "react";
+import {useNavigate} from "react-router-dom";
+
 import Boton from "../components/Boton.jsx";
 import IngresarTexto from "../components/IngresarTexto.jsx";
 import Titulo from "../components/Titulo.jsx";
@@ -8,6 +11,9 @@ import Titulo from "../components/Titulo.jsx";
 export default function Login() {
 
   const Redirection = useNavigate();
+
+  const [user] = useContext(UsuariosContext);
+
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
 
@@ -35,7 +41,7 @@ export default function Login() {
         Redirection("/publications");
       } else {
         alert(
-          "❌ Correo y/o Contraseña Incorrectos."
+          "❌ Correo y/o Contraseña incorrectos."
         ); /* TODO - Eliminar mensajes adicionales */
       }
     } catch (e) {
@@ -69,4 +75,5 @@ export default function Login() {
       </Container>
     </form>
   );
+
 }

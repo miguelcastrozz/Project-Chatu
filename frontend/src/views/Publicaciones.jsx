@@ -1,19 +1,33 @@
-import BarradeNav from "../components/Barra.jsx";
-import Publicar from "../components/Publicar.jsx";
+import UsuariosContext from "../context/UsuariosContext.jsx";
 import Container from "react-bootstrap/esm/Container";
-import { Form, Row } from "react-bootstrap";
-import "../stylesheets/app.css";
-import Multimedia from "../components/multimedia";
-import Publication from "../components/Publication.jsx";
+
+import {Form, Row} from "react-bootstrap";
+import {useContext, useState} from "react";
+
 import Boton from "../components/Boton.jsx";
+import BarradeNav from "../components/Barra.jsx";
+import Multimedia from "../components/multimedia";
+import Publicar from "../components/Publicar.jsx";
+import Publication from "../components/Publication.jsx";
+
+import "../stylesheets/app.css";
 
 export default function Publicaciones() {
 
+  const {user, setUser} = useContext(UsuariosContext);
+  const [publicaciones, setPublicaciones] = useState([]);
 
-  // Inserte el nombre de usuario de la persona que ingreso
+  const usuario = "Juan";
 
-  function saludar(nombre) {
-    return `Bienvenido, ${nombre}`;
+  async function traerPublicaciones() {
+    try {
+      const obtener = await fetch("http://localhost:8080/api/usuarios" + usuario);
+      const publicaciones = await obtener.json(); /* Aquí se obtiene el JSON */
+      setPublicaciones(publicaciones);    /* Actualiza el estado */
+      /* const {nombre, nombre_usuario, correo, anio_nacimiento} = publicaciones; */
+    } catch (e) {
+      console.error("ERROR: " + e)
+    }
   }
 
   function comentario(comentario) {
@@ -24,7 +38,6 @@ export default function Publicaciones() {
     );
   }
 
-  // Componente publication
   function publicar(titulo, Contenido, comentarios) {
     return (
       <Publication>
@@ -58,7 +71,7 @@ export default function Publicaciones() {
         </Row>
         <Row>
           <Container className="Publicaciones-saludo">
-            <h1>{saludar("juan")}</h1>
+            <h1>Bienvenido, {usuario}</h1>
           </Container>
         </Row>
         <Row>
@@ -73,7 +86,6 @@ export default function Publicaciones() {
                 comentario("me debes peso"),
               ])}
               {publicar("Publicación de terror", "Chucky da miedo")}
-              {publicar("Publicación de humor", "El agua moja")}
             </Container>
           </Container>
         </Row>

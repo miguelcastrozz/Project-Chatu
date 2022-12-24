@@ -3,9 +3,6 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export async function createUser(req, res) {
-  // Para llegar a esta ruta uzamos el método POST
-  // http://localhost:8080/api/usuarios
-
   const usuario = req.body.usuario;
   console.log(usuario);
   const { nombre, nombre_usuario, contrasenia, correo, anio_nacimiento } = req.body.usuario;
@@ -84,7 +81,7 @@ export async function updateUser(req, res) {
 
 export async function deleteUser(req, res) {
   const userName = req.params.nombre_usuario;
-  var user = null;
+  let user = null;
   try {
     user = await userModel.deleteOne({ nombre_usuario: userName });
     res.status(200).json(user);
