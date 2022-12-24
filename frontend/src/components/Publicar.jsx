@@ -1,6 +1,8 @@
-import { Container, Form } from "react-bootstrap";
+import {Container, Form} from "react-bootstrap";
+
 import Boton from "./Boton.jsx";
 import IngresarTexto from "./IngresarTexto.jsx";
+
 import "../stylesheets/app.css";
 
 export default function Publicar() {

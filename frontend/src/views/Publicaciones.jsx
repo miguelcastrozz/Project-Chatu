@@ -1,26 +1,25 @@
-import { useContext, useEffect, useState } from "react";
+import {useContext, useEffect, useState} from "react";
+import {useCookies} from "react-cookie";
+import {useNavigate} from "react-router-dom";
+
+import {Form, Row} from "react-bootstrap";
+
 import BarradeNav from "../components/Barra.jsx";
-import Publicar from "../components/Publicar.jsx";
-import Container from "react-bootstrap/esm/Container";
-import { Form, Row } from "react-bootstrap";
-import "../stylesheets/app.css";
-import Multimedia from "../components/multimedia";
-import Publication from "../components/Publication.jsx";
 import Boton from "../components/Boton.jsx";
-import { useCookies } from "react-cookie";
+import Container from "react-bootstrap/esm/Container";
+import Multimedia from "../components/multimedia";
+import Publicar from "../components/Publicar.jsx";
+import Publication from "../components/Publication.jsx";
 import TokenContext from "../context/TokenContext.jsx";
-import { useNavigate } from "react-router-dom";
+
+import "../stylesheets/app.css";
 
 export default function Publicaciones() {
 
-
-  // Inserte el nombre de usuario de la persona que ingreso
-
   function saludar(nombre) {
     const Redirection = useNavigate();
-    const { token } = useContext(TokenContext);
+    const {token} = useContext(TokenContext);
     const [cookies, setCookies] = useCookies(["token"]);
-//    const [cookies1, setCookies1] = useCookies(["user"]);
     const currentToken = token ? token : cookies.token;
     useEffect(() => {
       if (token) {
@@ -32,7 +31,6 @@ export default function Publicaciones() {
   }
 
   function comentario(comentario) {
-
     return (
       <Container className="publicacion-comentario">
         <p className="publicacion-comentarios-caja">{comentario}</p>

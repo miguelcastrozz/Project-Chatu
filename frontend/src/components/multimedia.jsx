@@ -1,7 +1,7 @@
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 export default function Multimedia(...props) {
-
-
-  return <Container className ="imagenes">{props.children}</Container>;
+  return (
+    <Container className="imagenes">{props.children}</Container>
+  );
 }

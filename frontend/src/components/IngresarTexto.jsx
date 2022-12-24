@@ -1,6 +1,7 @@
 import Form from "react-bootstrap/Form";
 
-export default function IngresarTexto({ ...props }) {
+export default function IngresarTexto({...props}) {
+
   const styles = {
     height: `${props.height}rem`,
   };
@@ -18,4 +19,5 @@ export default function IngresarTexto({ ...props }) {
       </Form>
     </div>
   );
+  
 }

@@ -15,7 +15,7 @@ export async function readOneComment(req, res) {
   const id = req.params.id;
   let documento;
   try {
-    documento = await commentModel.findOne({ _id: id });
+    documento = await commentModel.findOne({_id: id});
   } catch (error) {
     res.status(400).json(error.message);
   }
@@ -35,10 +35,10 @@ export async function readComment(req, res) {
 export async function updateComment(req, res) {
   const id = req.params.id;
   const updates = req.body.updates;
-  const { field, value } = updates;
+  const {field, value} = updates;
   let documento;
   try {
-    documento = await commentModel.updateOne({ _id: id }, updates);
+    documento = await commentModel.updateOne({_id:id}, updates);
     res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error.message);
@@ -49,7 +49,7 @@ export async function deleteComment(req, res) {
   const id = req.params.id;
   let documento;
   try {
-    documento = await commentModel.deleteOne({ _id: id });
+    documento = await commentModel.deleteOne({_id: id});
     res.status(201).json(documento);
   } catch (error) {
     res.status(400).json(error.message);

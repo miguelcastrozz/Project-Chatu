@@ -1,21 +1,23 @@
+import {useContext, useState} from "react";
+import {useCookies} from "react-cookie";
+import {useNavigate} from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import Boton from "../components/Boton.jsx";
 import IngresarTexto from "../components/IngresarTexto.jsx";
 import Titulo from "../components/Titulo.jsx";
-import { useCookies } from "react-cookie";
 import TokenContext from "../context/TokenContext";
 
 export default function Login() {
-  const { setToken } = useContext(TokenContext); //Contexto Para el Token
-  //const { setUser } = useContext(UserContext); //Contexto Para el Usuario
+  
+  const {setToken} = useContext(TokenContext);
   const Redirection = useNavigate();
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
   const [cookies, setCookies] = useCookies(["token", "user"]);
 
-  async function onSubmit(e) {
+  async function onSubmit(e) { 
     e.preventDefault();
     try {
       const doc = await fetch("http://localhost:8080/api/login", {
@@ -35,15 +37,12 @@ export default function Login() {
       });
       const resp = await doc.json();
       setToken(resp.token);
-//      alert(resp.user);
-
       if (doc.status === 200) {
         alert("✅ BIENVENIDO A CHATU");
-        setCookies("token", setToken, { path: "/" });
-//        setCookies("user", vlUser, { path: "/" });
+        setCookies("token", setToken, {path: "/"});
         Redirection("/publications");
       } else {
-        alert("❌ Correo y/o Contraseña Incorrectos."); /* TODO - Eliminar mensajes adicionales */
+        alert("❌ Correo y/o Contraseña Incorrectos.");
       }
     } catch (e) {
       alert("❌ " + e.message);

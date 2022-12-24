@@ -1,14 +1,15 @@
-import {Route, Routes} from "react-router-dom";
-import { CookiesProvider } from "react-cookie";
 import React from "react";
-import "./stylesheets/root/global.css";
-import "./stylesheets/root/reset.css";
+import {Route, Routes} from "react-router-dom";
+import {CookiesProvider} from "react-cookie";
+
 import Inicio from "./views/Inicio.jsx";
 import Login from "./views/Login.jsx";
 import Publicaciones from "./views/Publicaciones.jsx";
 import Registro from "./views/Registro.jsx";
-import { TokenProvider } from "./context/TokenContext";
-import { UsuariosContextProvider } from "./context/UsuariosContext";
+import {TokenProvider} from "./context/TokenContext";
+
+import "./stylesheets/root/global.css";
+import "./stylesheets/root/reset.css";
 
 export default function App() {
   return (

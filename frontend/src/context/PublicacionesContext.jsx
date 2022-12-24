@@ -7,7 +7,7 @@ export function PublicacionesContextProvider(props) {
   return (
     <PublicacionesContext.Provider value={{
       // ITEMS
-    }}>
+     }}>
     </PublicacionesContext.Provider>
   );
 }

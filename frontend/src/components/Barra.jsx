@@ -1,9 +1,12 @@
-import { Row, Col } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
+import {Row, Col} from "react-bootstrap";
+
 import "../stylesheets/app.css";
+
 import Logo from "../assets/logo.png";
 
-export default function BarradeNav({ ...props }) {
+export default function BarradeNav({...props}) {
+
   const Logo_style = {
     borderRadius: "100%",
     width: "4rem",
@@ -29,4 +32,5 @@ export default function BarradeNav({ ...props }) {
       </Col>
     </Row>
   );
+  
 }

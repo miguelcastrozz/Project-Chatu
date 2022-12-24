@@ -1,10 +1,11 @@
-import "../style-sheets/app.css";
-
 import Boton from "./toolbox/Button";
 import Texto from "./toolbox/Input";
 import Titulo from "./toolbox/Titulo";
 
+import "../style-sheets/app.css";
+
 export default function Ingreso() {
+
   const long = 18;
   const height = 2;
 
@@ -13,6 +14,7 @@ export default function Ingreso() {
       <Titulo x={2} y={1} saiz={5}>
         ¡Bienvenido!, nuevo usuario
       </Titulo>
+
       <Texto x={31} y={12} archtype={"text"} width={long} height={height}>
         usuario:
       </Texto>
@@ -26,4 +28,5 @@ export default function Ingreso() {
       </Boton>
     </div>
   );
+  
 }

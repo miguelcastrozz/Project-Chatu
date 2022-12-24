@@ -1,10 +1,13 @@
 import {useState} from "react";
+
 import Container from "react-bootstrap/Container";
+
 import Boton from "../components/Boton.jsx";
 import IngresarTexto from "../components/IngresarTexto.jsx";
 import Titulo from "../components/Titulo.jsx";
 
 export default function Registro() {
+  
   async function onSubmit(e) {
     e.preventDefault();
     try {
